@@ -69,8 +69,8 @@ public class PlaceOrderView extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         rbtnCredit = new javax.swing.JRadioButton();
         rbtnCOD = new javax.swing.JRadioButton();
-        jScrollPane3 = new javax.swing.JScrollPane();
-        tblVouchers = new javax.swing.JTable();
+        //jScrollPane3 = new javax.swing.JScrollPane();
+        //tblVouchers = new javax.swing.JTable();
         btnRemovePaymentInfo = new javax.swing.JButton();
         btnAddPaymentInfo = new javax.swing.JButton();
         //jLabel9 = new javax.swing.JLabel();
@@ -251,7 +251,7 @@ public class PlaceOrderView extends javax.swing.JFrame {
 //            tblVouchers.getColumnModel().getColumn(2).setMaxWidth(100);
 //        }
 
-        getContentPane().add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 430, 485, 90));
+        //getContentPane().add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 430, 485, 90));
 
         btnRemovePaymentInfo.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btnRemovePaymentInfo.setText("Remove");
@@ -279,7 +279,7 @@ public class PlaceOrderView extends javax.swing.JFrame {
         jLabel10.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setText("Note: ");
-        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 560, 65, -1));
+        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(761, 410, -1, -1));
 
         btnPurchase.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnPurchase.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/add to cart.png"))); // NOI18N
@@ -320,7 +320,7 @@ public class PlaceOrderView extends javax.swing.JFrame {
         txtNote.setRows(3);
         jScrollPane4.setViewportView(txtNote);
 
-        getContentPane().add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 560, 270, -1));
+        getContentPane().add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 430, 485, 150));
 
         btnClose.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/close.png"))); // NOI18N
         btnClose.addActionListener(new java.awt.event.ActionListener() {
@@ -385,7 +385,7 @@ public class PlaceOrderView extends javax.swing.JFrame {
     DefaultTableModel tblItemsModel;
     DefaultTableModel tblDeliveryModel;
     DefaultTableModel tblPaymentModel;
-    DefaultTableModel tblVouchersModel;
+    //DefaultTableModel tblVouchersModel;
 
     private double total;
     private double shipCost = 1;
@@ -624,7 +624,7 @@ public class PlaceOrderView extends javax.swing.JFrame {
     //private javax.swing.JLabel jLabel9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JScrollPane jScrollPane3;
+    //private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JLabel lblDiscount;
@@ -636,7 +636,7 @@ public class PlaceOrderView extends javax.swing.JFrame {
     private javax.swing.JTable tblDelivery;
     private javax.swing.JTable tblItems;
     private javax.swing.JTable tblPayment;
-    private javax.swing.JTable tblVouchers;
+    //private javax.swing.JTable tblVouchers;
     private javax.swing.JTextArea txtNote;
     // End of variables declaration//GEN-END:variables
 }
