@@ -19,7 +19,7 @@ import model.Order;
 import model.PaymentInfo;
 import model.User;
 
-
+  
 public class PlaceOrderView extends javax.swing.JFrame {
 
     private int userId;
