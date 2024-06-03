@@ -27,7 +27,5 @@ public class User {
     private String answer;
     private LocalDateTime createdAt;
     private boolean isApproved;
-    private int point;
-    private int rank;
     
 }

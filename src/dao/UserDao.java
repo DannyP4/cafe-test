@@ -120,7 +120,7 @@ public class UserDao {
         return user;
     }
 
-    public User getSecurityQuestion(String email) {
+    public static User getSecurityQuestion(String email) {
         User user = null;
         try {
             ResultSet rs = DbOperations.getData("SELECT * FROM [User] WHERE Email = ?", new Object[]{email});
@@ -133,14 +133,13 @@ public class UserDao {
             JOptionPane.showMessageDialog(null, e);
         }
         return user;
-
     }
 
-    public void updatePassword(String email, String newPassword) {
+    public static void updatePassword(String email, String newPassword) {
         String query = "UPDATE [User] SET Password = ? WHERE Email = ?";
         Object[] args = {newPassword, email};
 
-        DbOperations.updateData(query, args, "Password changed succcessfully!");
+        DbOperations.updateData(query, args, "Password changed successfully!");
     }
 
     public List<User> findByEmail(String email) {

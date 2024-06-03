@@ -6,6 +6,8 @@ package view;
 
 import dao.UserDao;
 import javax.swing.JOptionPane;
+import model.User;
+
 
 /**
  *
@@ -206,7 +208,15 @@ public class NewForgotPasswordPage extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateActionPerformed
-        // TODO add your handling code here:
+        String answer = txtAnswer.getText();
+        String newPassword = txtAnswer.getText();
+        if (answer.equals(dbAnswer)) {
+            UserDao.updatePassword(email, newPassword);
+            clear();
+        }
+        else
+            JOptionPane.showMessageDialog(null, "<html><b style = \"color:red\">Incorrect Email</b></html>", "Message", JOptionPane.ERROR_MESSAGE);
+
     }//GEN-LAST:event_btnUpdateActionPerformed
 
     private void txtSecurityQuestionKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtSecurityQuestionKeyReleased
@@ -226,7 +236,18 @@ public class NewForgotPasswordPage extends javax.swing.JFrame {
     }//GEN-LAST:event_txtAnswerKeyReleased
 
     private void btnSearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSearchActionPerformed
-        // TODO add your handling code here:
+        email = txtEmail.getText();
+        User user = null;
+        user = UserDao.getSecurityQuestion(email);
+        if (user == null)
+            JOptionPane.showMessageDialog(null, "<html><b style = \"color:red\">Incorrect Email</b></html>", "Message", JOptionPane.ERROR_MESSAGE);
+        else {
+            btnSearch.setEnabled(false);
+            txtEmail.setEditable(false);
+            dbAnswer = user.getAnswer();
+            txtSecurityQuestion.setText(user.getSecurityQuestion());
+            validateFields();
+        }
     }//GEN-LAST:event_btnSearchActionPerformed
 
     private void btnExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExitActionPerformed

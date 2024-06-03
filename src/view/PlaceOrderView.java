@@ -19,10 +19,7 @@ import model.Order;
 import model.PaymentInfo;
 import model.User;
 
-/**
- *
- * @author Dungpc
- */
+
 public class PlaceOrderView extends javax.swing.JFrame {
 
     private int userId;
@@ -224,34 +221,6 @@ public class PlaceOrderView extends javax.swing.JFrame {
         });
         getContentPane().add(rbtnCOD, new org.netbeans.lib.awtextra.AbsoluteConstraints(1100, 250, -1, -1));
 
-//        tblVouchers.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-//        tblVouchers.setModel(new javax.swing.table.DefaultTableModel(
-//            new Object [][] {
-//
-//            },
-//            new String [] {
-//                "ID", "Voucher", "Expirement Date"
-//            }
-//        ) {
-//            Class[] types = new Class [] {
-//                java.lang.Object.class, java.lang.String.class, java.lang.String.class
-//            };
-//
-//            public Class getColumnClass(int columnIndex) {
-//                return types [columnIndex];
-//            }
-//        });
-
-//        jScrollPane3.setViewportView(tblVouchers);
-//        if (tblVouchers.getColumnModel().getColumnCount() > 0) {
-//            tblVouchers.getColumnModel().getColumn(0).setMinWidth(0);
-//            tblVouchers.getColumnModel().getColumn(0).setPreferredWidth(0);
-//            tblVouchers.getColumnModel().getColumn(0).setMaxWidth(0);
-//            tblVouchers.getColumnModel().getColumn(2).setPreferredWidth(100);
-//            tblVouchers.getColumnModel().getColumn(2).setMaxWidth(100);
-//        }
-
-        //getContentPane().add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 430, 485, 90));
 
         btnRemovePaymentInfo.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btnRemovePaymentInfo.setText("Remove");
@@ -271,10 +240,6 @@ public class PlaceOrderView extends javax.swing.JFrame {
         });
         getContentPane().add(btnAddPaymentInfo, new org.netbeans.lib.awtextra.AbsoluteConstraints(1187, 370, -1, -1));
 
-//        jLabel9.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-//        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
-//        jLabel9.setText("Voucher: ");
-//        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 400, -1, -1));
 
         jLabel10.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(255, 255, 255));
@@ -365,13 +330,6 @@ public class PlaceOrderView extends javax.swing.JFrame {
         getContentPane().add(jScrollPane5, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 270, 485, 90));
 
         btnDeselect.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-//        btnDeselect.setText("Deselect");
-//        btnDeselect.addActionListener(new java.awt.event.ActionListener() {
-//            public void actionPerformed(java.awt.event.ActionEvent evt) {
-//                btnDeselectActionPerformed(evt);
-//            }
-//        });
-//        getContentPane().add(btnDeselect, new org.netbeans.lib.awtextra.AbsoluteConstraints(1150, 530, -1, -1));
 
         jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/full-page-background.PNG"))); // NOI18N
         jLabel15.setMaximumSize(new java.awt.Dimension(1366, 768));
@@ -498,12 +456,6 @@ public class PlaceOrderView extends javax.swing.JFrame {
         validateFields();
     }//GEN-LAST:event_tblPaymentMouseClicked
 
-//    private void btnDeselectActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeselectActionPerformed
-//        tblVouchers.clearSelection();
-//        discount = 0;
-//        updateCosts();
-//    }//GEN-LAST:event_btnDeselectActionPerformed
-
     private void loadItems() {
         tblItemsModel = (DefaultTableModel) tblItems.getModel();
         tblItemsModel.setRowCount(0);
@@ -621,7 +573,6 @@ public class PlaceOrderView extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
-    //private javax.swing.JLabel jLabel9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     //private javax.swing.JScrollPane jScrollPane3;
@@ -636,7 +587,6 @@ public class PlaceOrderView extends javax.swing.JFrame {
     private javax.swing.JTable tblDelivery;
     private javax.swing.JTable tblItems;
     private javax.swing.JTable tblPayment;
-    //private javax.swing.JTable tblVouchers;
     private javax.swing.JTextArea txtNote;
     // End of variables declaration//GEN-END:variables
 }
