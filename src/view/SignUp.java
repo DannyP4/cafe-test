@@ -166,6 +166,11 @@ public class SignUp extends javax.swing.JFrame {
 
         btnForgot.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btnForgot.setText("Forgot Password?");
+        btnForgot.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnForgotActionPerformed(evt);
+            }
+        });
         getContentPane().add(btnForgot, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 670, -1, -1));
 
         jLabel8.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -305,6 +310,11 @@ public class SignUp extends javax.swing.JFrame {
     private void txtAnswerKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtAnswerKeyReleased
         validateFields();
     }//GEN-LAST:event_txtAnswerKeyReleased
+
+    private void btnForgotActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSignupActionPerformed
+        setVisible(false);
+        new NewForgotPasswordPage().setVisible(true);
+    }//GEN-LAST:event_btnSignupActionPerformed
 
     public void validateFields() {
         String name = txtName.getText();
