@@ -7,8 +7,6 @@ public class DatabaseInit {
     private static final String dropTables
             = """
             DROP TABLE IF EXISTS CartItem;
-            DROP TABLE IF EXISTS VoucherUsage;
-            DROP TABLE IF EXISTS Voucher;
             DROP TABLE IF EXISTS OrderDetails;
             DROP TABLE IF EXISTS [Order];
             DROP TABLE IF EXISTS Status;
@@ -19,7 +17,6 @@ public class DatabaseInit {
             DROP TABLE IF EXISTS Product;
             DROP TABLE IF EXISTS Category;
             DROP TABLE IF EXISTS [User];
-            DROP TABLE IF EXISTS Rank;
             """;
 
     private static final String userTable

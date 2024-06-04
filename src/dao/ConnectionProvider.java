@@ -18,7 +18,7 @@ public class ConnectionProvider {
 
     public static Connection getConnection() {
         //String url = "jdbc:sqlserver://aylesw-server.database.windows.net:1433;databaseName=database-1";
-        String url = "jdbc:sqlserver://localhost\\SQLEXPRESS:1433;databaseName=test;sslProtocol=TLSv1.2;encrypt=true;trustServerCertificate=true";
+        String url = "jdbc:sqlserver://localhost\\MSSQLSERVER01:1433;databaseName=test;sslProtocol=TLSv1.2;encrypt=true;trustServerCertificate=true";
         String user = "sa";
         String password = "longan47";
         try {
