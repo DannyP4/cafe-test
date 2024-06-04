@@ -8,10 +8,8 @@ import model.Product;
 import model.Cart;
 import model.CartItem;
 
-/**
- *
- * @author Admin
- */
+
+
 public class ProductItem extends javax.swing.JPanel {
 
     private Product product;

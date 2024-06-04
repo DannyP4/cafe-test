@@ -9,10 +9,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import model.User;
 
-/**
- *
- * @author Dungpc
- */
+
 public class Login extends javax.swing.JFrame {
 
     private UserDao userdao = new UserDao();
@@ -152,11 +149,11 @@ public class Login extends javax.swing.JFrame {
         User user = null;
         user = userdao.login(email, password);
         if (user == null) {
-            JOptionPane.showMessageDialog(null, "<html><b style=\"color:red\"> Incorrect email or password  </b>  </html>", "Message", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, "<html><b style=\"color:red\">Incorrect email or password</b></html>", "Message", JOptionPane.ERROR_MESSAGE);
         } else {
             if (!user.isApproved()) {
                 ImageIcon icon = new ImageIcon("src/popupicon/wait.png");
-                JOptionPane.showMessageDialog(null, "<html> <b>Wait for Admin Approval </b></html>", "Message", JOptionPane.INFORMATION_MESSAGE, icon);
+                JOptionPane.showMessageDialog(null, "<html><b>Wait for Admin Approval </b></html>", "Message", JOptionPane.INFORMATION_MESSAGE, icon);
                 clear();
             } else {
                 setVisible(false);

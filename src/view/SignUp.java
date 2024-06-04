@@ -11,10 +11,8 @@ import java.util.Date;
 import javax.swing.JOptionPane;
 import model.User;
 
-/**
- *
- * @author Admin
- */
+
+
 public class SignUp extends javax.swing.JFrame {
 
     private String emailPattern = "^[a-zA-Z0-9]+[@][a-zA-Z0-9]+([.][a-zA-Z0-9]+)+$";

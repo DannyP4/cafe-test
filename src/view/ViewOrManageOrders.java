@@ -17,10 +17,8 @@ import model.Order;
 import model.Staff;
 import model.Status;
 
-/**
- *
- * @author Dungpc
- */
+
+
 public class ViewOrManageOrders extends javax.swing.JFrame {
 
     /**

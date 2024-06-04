@@ -10,10 +10,7 @@ import java.time.LocalDate;
 import java.util.List;
 import model.Staff;
 
-/**
- *
- * @author Dungpc
- */
+
 public class AddOrEditStaff extends javax.swing.JFrame {
 
     private int staffId;

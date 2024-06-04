@@ -6,10 +6,7 @@ package view;
 
 import dao.UserDao;
 
-/**
- *
- * @author Administrator
- */
+s
 public class ChangePassword extends javax.swing.JFrame {
 
     private String userEmail;

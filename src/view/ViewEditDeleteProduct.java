@@ -13,10 +13,7 @@ import javax.swing.table.TableModel;
 import model.Category;
 import model.Product;
 
-/**
- *
- * @author Admin
- */
+
 public class ViewEditDeleteProduct extends javax.swing.JFrame {
 
     private CategoryDao categoryDao = CategoryDao.getInstance();

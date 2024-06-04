@@ -7,10 +7,7 @@ package view;
 import dao.DeliveryInfoDao;
 import model.DeliveryInfo;
 
-/**
- *
- * @author Admin
- */
+
 public class AddDeliveryInfo extends javax.swing.JFrame {
 
     /**

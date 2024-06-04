@@ -9,10 +9,7 @@ import javax.swing.JOptionPane;
 import model.User;
 
 
-/**
- *
- * @author Admin
- */
+
 public class NewForgotPasswordPage extends javax.swing.JFrame {
 
     private UserDao userDao = new UserDao();
@@ -45,11 +42,9 @@ public class NewForgotPasswordPage extends javax.swing.JFrame {
         email = txtEmail.getText();
         if (email.matches(emailPattern)) {
             btnSearch.setEnabled(true);
-
         } else {
             btnSearch.setEnabled(true);
         }
-
     }
 
     public void validateFields() {
@@ -118,6 +113,11 @@ public class NewForgotPasswordPage extends javax.swing.JFrame {
 
         btnSignup.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btnSignup.setText("Sign up");
+        btnSignup.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSignupActionPerformed(evt);
+            }
+        });
         getContentPane().add(btnSignup, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 500, -1, -1));
 
         txtNewPassWord.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -164,6 +164,11 @@ public class NewForgotPasswordPage extends javax.swing.JFrame {
 
         btnLogin.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btnLogin.setText("Login");
+        btnLogin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLoginActionPerformed(evt);
+            }
+        });
         getContentPane().add(btnLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(802, 500, 90, -1));
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -234,6 +239,16 @@ public class NewForgotPasswordPage extends javax.swing.JFrame {
     private void txtAnswerKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtAnswerKeyReleased
         validateFields();
     }//GEN-LAST:event_txtAnswerKeyReleased
+
+    private void btnSignupActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSignupActionPerformed
+        setVisible(false);
+        new SignUp().setVisible(true);
+    }//GEN-LAST:event_btnSignupActionPerformed
+
+    private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
+        setVisible(false);
+        new Login().setVisible(true);
+    }//GEN-LAST:event_btnLoginActionPerformed
 
     private void btnSearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSearchActionPerformed
         email = txtEmail.getText();

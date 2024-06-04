@@ -6,10 +6,9 @@ package view;
 import dao.CategoryDao;
 import dao.ProductDao;
 import model.Product;
-/**
- *
- * @author Hasagi
- */
+
+
+
 public class AddNewProduct extends javax.swing.JFrame {
     
     private CategoryDao categoryDao = CategoryDao.getInstance();

@@ -12,10 +12,8 @@ import java.util.*;
 import javax.swing.JOptionPane;
 import javax.swing.table.TableModel;
 
-/**
- *
- * @author Hasagi
- */
+
+
 public class ManageCategory extends javax.swing.JFrame {
 
     private CategoryDao categoryDao = new CategoryDao();

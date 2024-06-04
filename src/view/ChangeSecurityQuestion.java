@@ -7,10 +7,7 @@ package view;
 import dao.UserDao;
 import model.User;
 
-/**
- *
- * @author Administrator
- */
+
 public class ChangeSecurityQuestion extends javax.swing.JFrame {
 
     private String userEmail;

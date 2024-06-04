@@ -11,6 +11,7 @@ import java.util.List;
 import model.User;
 
 
+
 public class ViewProfile extends javax.swing.JFrame {
 
     /**

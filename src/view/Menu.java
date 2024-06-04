@@ -15,10 +15,7 @@ import model.Cart;
 import model.CartItem;
 import model.Product;
 
-/**
- *
- * @author Admin
- */
+
 public class Menu extends javax.swing.JFrame {
 
     /**

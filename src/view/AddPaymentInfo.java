@@ -11,10 +11,7 @@ import java.time.temporal.TemporalAdjusters;
 import java.util.List;
 import model.PaymentInfo;
 
-/**
- *
- * @author Admin
- */
+
 public class AddPaymentInfo extends javax.swing.JFrame {
 
     /**

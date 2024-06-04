@@ -7,10 +7,7 @@ package view;
 import dao.UserDao;
 import javax.swing.JOptionPane;
 
-/**
- *
- * @author Dungpc
- */
+
 public class Home extends javax.swing.JFrame {
 
     private String email;

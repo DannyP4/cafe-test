@@ -11,10 +11,8 @@ import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
 import model.User;
 
-/**
- *
- * @author Admin
- */
+
+
 public class VerifyUsers extends javax.swing.JFrame {
     
     private UserDao userDao = new UserDao();

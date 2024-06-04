@@ -7,10 +7,7 @@ package view;
 import dao.StaffDao;
 import javax.swing.table.DefaultTableModel;
 
-/**
- *
- * @author Dungpc
- */
+
 public class ManageStaff extends javax.swing.JFrame {
 
     /**

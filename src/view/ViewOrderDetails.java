@@ -23,10 +23,8 @@ import model.Order;
 import model.Staff;
 import model.User;
 
-/**
- *
- * @author Dungpc
- */
+
+
 public class ViewOrderDetails extends javax.swing.JFrame {
 
     /**
