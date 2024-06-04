@@ -56,7 +56,7 @@ public class PaymentInfoDao {
     public void add(PaymentInfo info) {
         String query = "INSERT INTO PaymentInfo (UserId, CardNumber, ExpMonth, ExpYear, SecurityCode, OwnerName, BillingAddress1, BillingAddress2, City, ZipCode, Country) "
                 + "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
-        Object[] args = {info.getUserId(), info.getCardNumber(), info.getExpMonth(), info.getExpYear(), info.getSecurityCode(), info.getOwnerName(), info.getBillingAddress1(), info.getBillingAddress2(), info.getCity(), info.getZipCode(), info.getCountry()};
+        Object[] args = {info.getUserId(), info.getCardNumber(), info.getExpMonth(), info.getExpYear() - 2000, info.getSecurityCode(), info.getOwnerName(), info.getBillingAddress1(), info.getBillingAddress2(), info.getCity(), info.getZipCode(), info.getCountry()};
         DbOperations.updateData(query, args, "Added new payment info");
     }
 

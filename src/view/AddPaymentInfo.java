@@ -358,17 +358,19 @@ public class AddPaymentInfo extends javax.swing.JFrame {
         cbxCountry.setSelectedItem("Vietnam");
     }//GEN-LAST:event_formComponentShown
 
+    // check the condition of User's Payment Info
     private void validateFields() {
         try {
             int month = Integer.parseInt(txtExpMonth.getText());
             int year = Integer.parseInt(txtExpYear.getText());
             if (txtCardNumber.getText().matches("[0-9]{16}")
                     && month >= 1 && month <= 12
-                    && year >= LocalDate.now().getYear() % 100 && year < 100
+                    && year >= LocalDate.now().getYear() && year < LocalDate.now().getYear() + 100
                     && LocalDate.of(year + LocalDate.now().getYear() / 100 * 100, month, 1).with(TemporalAdjusters.lastDayOfMonth()).isAfter(LocalDate.now())
                     && txtSecCode.getText().matches("[0-9]{3}")
                     && !txtOwnerName.getText().isEmpty()
-                    && (txtZipCode.getText().isEmpty() || txtZipCode.getText().matches("[0-9]+"))) {
+                    && (txtZipCode.getText().isEmpty() || txtZipCode.getText().matches("[0-9]+")))
+            {
                 btnSave.setEnabled(true);
             } else {
                 btnSave.setEnabled(false);

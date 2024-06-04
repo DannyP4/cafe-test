@@ -10,10 +10,7 @@ import java.sql.SQLException;
 
 import javax.swing.JOptionPane;
 
-/**
- *
- * @author Dungpc
- */
+
 public class ConnectionProvider {
 
     public static Connection getConnection() {
