@@ -10,10 +10,7 @@ import java.time.LocalDate;
 import java.util.List;
 import model.User;
 
-/**
- *
- * @author Dungpc
- */
+
 public class ViewProfile extends javax.swing.JFrame {
 
     /**
@@ -80,16 +77,6 @@ public class ViewProfile extends javax.swing.JFrame {
         lblName.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblName.setText("Name");
         jPanel1.add(lblName, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 246, 350, -1));
-
-//        lblPoints.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-//        lblPoints.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-//        lblPoints.setText("Points: ");
-//        jPanel1.add(lblPoints, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 320, 350, -1));
-//
-//        lblRank.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-//        lblRank.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-//        lblRank.setText("Rank: ");
-//        jPanel1.add(lblRank, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 363, 350, -1));
 
         jLabel13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/user.png"))); // NOI18N
@@ -377,8 +364,6 @@ public class ViewProfile extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel lblId;
     private javax.swing.JLabel lblName;
-    //private javax.swing.JLabel lblPoints;
-    //private javax.swing.JLabel lblRank;
     private javax.swing.JTextField txtAddress;
     private javax.swing.JTextField txtEmail;
     private javax.swing.JTextField txtFullName;
