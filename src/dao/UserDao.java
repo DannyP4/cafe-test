@@ -40,7 +40,7 @@ public class UserDao {
 
     public User getById(int userId) {
         try {
-            String query = "SELECT * FROM [User] WHERE Id = ?;";
+             String query = "SELECT * FROM [User] WHERE Id = ?;";
             ResultSet rs = DbOperations.getData(query, new Object[]{userId});
 
             User user = null;
