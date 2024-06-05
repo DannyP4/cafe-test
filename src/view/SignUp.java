@@ -151,6 +151,11 @@ public class SignUp extends javax.swing.JFrame {
         btnExit.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btnExit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/exit small.png"))); // NOI18N
         btnExit.setText("Exit");
+        btnExit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnExitActionPerformed(evt);
+            }
+        });
         getContentPane().add(btnExit, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 620, -1, -1));
 
         btnLogin.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -313,6 +318,13 @@ public class SignUp extends javax.swing.JFrame {
         setVisible(false);
         new NewForgotPasswordPage().setVisible(true);
     }//GEN-LAST:event_btnSignupActionPerformed
+
+    private void btnExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExitActionPerformed
+        int a = JOptionPane.showConfirmDialog(null, "Do you want to close Application", "Select", JOptionPane.YES_NO_OPTION);
+        if (a == 0) {
+            System.exit(0);
+        }
+    }//GEN-LAST:event_btnExitActionPerformed
 
     public void validateFields() {
         String name = txtName.getText();
