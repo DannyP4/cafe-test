@@ -214,7 +214,7 @@ public class NewForgotPasswordPage extends javax.swing.JFrame {
 
     private void btnUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateActionPerformed
         String answer = txtAnswer.getText();
-        String newPassword = txtAnswer.getText();
+        String newPassword = txtNewPassWord.getText();
         if (answer.equals(dbAnswer)) {
             UserDao.updatePassword(email, newPassword);
             clear();
