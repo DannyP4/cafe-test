@@ -264,7 +264,33 @@ public class DatabaseInit {
             INSERT INTO DeliveryInfo (UserId, RecipientName, PhoneNumber, Address)
             SELECT Id, FullName, PhoneNumber, Address FROM inserted;
             """;
-    
+
+    public static final String checkLegitofAgeTrigger =
+            """
+                    CREATE TRIGGER ageLegit
+                    ON [User]
+                    INSTEAD OF INSERT
+                    AS
+                    BEGIN
+                        DECLARE @dob DATE;
+                        DECLARE @currentDate DATE = GETDATE();
+                        
+                        SELECT @dob = BirthDate FROM inserted;
+                                
+                        IF (DATEDIFF(year, @dob, @currentDate) >= 15)
+                        BEGIN
+                            INSERT INTO [User] (Email, Password, FullName, Sex, BirthDate, PhoneNumber, Address, SecurityQuestion, Answer)
+                            SELECT Email, Password, FullName, Sex, BirthDate, PhoneNumber, Address, SecurityQuestion, Answer
+                            FROM inserted;
+                        END
+                        ELSE
+                        BEGIN
+                            PRINT 'Chua du tuoi dang ky!'
+                            ROLLBACK TRANSACTION;
+                        END
+                    END;                
+            """;
+
     private static final String randomUsers = 
             """
             insert into [User] (Email, Password, FullName, Sex, BirthDate, PhoneNumber, Address, SecurityQuestion, Answer) values ('vperris0@guardian.co.uk', 'vperris0@walmart.com', 'Vernice Perris', 'Female', '2019-12-17', '2263941387', '7886 Bashford Alley', 'Nunc nisl. Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum. In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo. Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.', 'Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus.');
@@ -336,6 +362,7 @@ public class DatabaseInit {
             DbOperations.updateData(cartItemTable, "Tables created successfully");
             DbOperations.updateData(defaultDeliveryInfoTrigger, "", false);
             DbOperations.updateData(delCategoryTrigger, "", false);
+            DbOperations.updateData(checkLegitofAgeTrigger, "", false);
 //            DbOperations.updateData(randomUsers, "Random data inserted successfully");
             
         } catch (Exception e) {

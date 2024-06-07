@@ -6,6 +6,8 @@ import java.util.List;
 import javax.swing.JOptionPane;
 import model.User;
 
+import static dao.ConnectionProvider.getConnection;
+
 public class UserDao {
 
     private static UserDao userDao;
@@ -70,6 +72,25 @@ public class UserDao {
         }
     }
 
+    public static void updateData(String query, Object[] args, String successMessage) throws SQLException {
+        try (Connection conn = getConnection();
+             PreparedStatement pstmt = conn.prepareStatement(query)) {
+
+            for (int i = 0; i < args.length; i++) {
+                pstmt.setObject(i + 1, args[i]);
+            }
+
+            pstmt.executeUpdate();
+            JOptionPane.showMessageDialog(null, successMessage);
+        } catch (SQLException e) {
+            throw e; // Ném ngoại lệ để phương thức gọi nó có thể xử lý
+        } catch (Exception e) {
+            // Xử lý các ngoại lệ khác (không phải SQLException)
+            throw new SQLException("An unexpected error occurred", e);
+        }
+    }
+
+
     public void create(User user) {
         String query = "INSERT INTO [User] (Email, Password, FullName, Sex, BirthDate, PhoneNumber, Address, SecurityQuestion, Answer) "
                 + "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
@@ -84,8 +105,13 @@ public class UserDao {
                 user.getSecurityQuestion(),
                 user.getAnswer()
         };
+        int result = DbOperations.updateData(query, args, "");
 
-        DbOperations.updateData(query, args, "Registered succcessfully! Please wait for admin approval.");
+        if (result == -1) {
+            JOptionPane.showMessageDialog(null, "Not old enough to register");
+        } else {
+            JOptionPane.showMessageDialog(null, "Registered successfully! Please wait for admin approval.");
+        }
     }
 
     public void update(User user) {
