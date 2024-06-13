@@ -232,7 +232,7 @@ public class ChangeSecurityQuestion extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new ChangeSecurityQuestion("admin@email.com").setVisible(true);
+                new ChangeSecurityQuestion("admin@gmail.com").setVisible(true);
             }
         });
     }

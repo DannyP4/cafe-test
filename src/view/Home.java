@@ -6,11 +6,19 @@ package view;
 
 import dao.UserDao;
 import javax.swing.JOptionPane;
+import java.util.HashSet;
+import java.util.Set;
 
 
 public class Home extends javax.swing.JFrame {
 
     private String email;
+    private static final Set<String> ADMIN_EMAILS = new HashSet<>();
+    static {
+        ADMIN_EMAILS.add("admin@gmail.com");
+        ADMIN_EMAILS.add("duy@gmail.com");
+        ADMIN_EMAILS.add("huy@gmail.com");
+    }
 
     /**
      * Creates new form Home
@@ -23,7 +31,7 @@ public class Home extends javax.swing.JFrame {
         initComponents();
         email = userEmail;
         System.out.println(email);
-        if (!email.equals("admin@email.com")) {
+        if (!ADMIN_EMAILS.contains(email)) {
             btnCategory.setVisible(false);
             btnNewProduct.setVisible(false);
             btnViewEditDeleteProduct.setVisible(false);

@@ -14,7 +14,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author Dungpc
+ * @author Long-1911
  */
 public class DbOperations {
 

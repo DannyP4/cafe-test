@@ -29,7 +29,9 @@ public class VerifyUsers extends javax.swing.JFrame {
         model.setRowCount(0);
         List<User> users = userDao.findByEmail(email);
         users.stream()
-                .filter(u -> !u.getEmail().equals("admin@email.com"))
+                .filter(u -> !u.getEmail().equals("admin@gmail.com"))
+                .filter(u -> !u.getEmail().equals("duy@gmail.com"))
+                .filter(u -> !u.getEmail().equals("huy@gmail.com"))
                 .forEach(u -> model.addRow(new Object[]{
             u.getId(),
             u.getFullName(),

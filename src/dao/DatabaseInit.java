@@ -36,7 +36,9 @@ public class DatabaseInit {
                 IsApproved BIT DEFAULT 0,
             );
             INSERT INTO [User] (Email, Password, FullName, Sex, BirthDate, PhoneNumber, Address, SecurityQuestion, Answer, IsApproved)
-            VALUES ('admin@email.com', 'admin', 'Admin', 'Null', '1900-01-01', '0123456789', 'None', 'Why is dark humor like food?', 'Because not everybody gets it', 1);
+            VALUES ('admin@gmail.com', 'admin', 'Admin', 'Null', '1900-01-01', '0123456789', 'None', 'Why is dark humor like food?', 'Because not everybody gets it', 1),
+            ('duy@gmail.com', 'admin', 'Duy', 'Null', '1900-01-01', '0123456780', 'None', 'Why is dark humor like food?', 'Because not everybody gets it', 1),
+            ('huy@gmail.com', 'admin', 'Huy', 'Null', '1900-01-01', '0123456781', 'None', 'Why is dark humor like food?', 'Because not everybody gets it', 1);
             """;
 
 
