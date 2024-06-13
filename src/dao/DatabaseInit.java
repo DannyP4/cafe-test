@@ -33,7 +33,7 @@ public class DatabaseInit {
                 SecurityQuestion VARCHAR(200) NOT NULL,
                 Answer VARCHAR(200) NOT NULL,
                 CreatedAt DATETIME DEFAULT CURRENT_TIMESTAMP,
-                IsApproved BIT DEFAULT 0,
+                IsApproved BIT DEFAULT 1,
             );
             INSERT INTO [User] (Email, Password, FullName, Sex, BirthDate, PhoneNumber, Address, SecurityQuestion, Answer, IsApproved)
             VALUES ('admin@gmail.com', 'admin', 'Admin', 'Null', '1900-01-01', '0123456789', 'None', 'Why is dark humor like food?', 'Because not everybody gets it', 1),
@@ -219,7 +219,6 @@ public class DatabaseInit {
                 MonthlySalary DECIMAL(10,2)
             );
             """;
-
 
 
     private static final String cartItemTable

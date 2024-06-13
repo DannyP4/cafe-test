@@ -110,7 +110,7 @@ public class UserDao {
         if (result == -1) {
             JOptionPane.showMessageDialog(null, "Not old enough to register");
         } else {
-            JOptionPane.showMessageDialog(null, "Registered successfully! Please wait for admin approval.");
+            JOptionPane.showMessageDialog(null, "Registered successfully!");
         }
     }
 
