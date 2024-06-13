@@ -292,6 +292,32 @@ public class DatabaseInit {
                         END
                     END;                
             """;
+
+    public static final String checkLegitofStaffAgeTrigger =
+            """
+                    CREATE TRIGGER ageLegitofStaff
+                    ON Staff
+                    INSTEAD OF INSERT
+                    AS
+                    BEGIN
+                    	DECLARE @dob DATE;
+                        DECLARE @currentDate DATE = GETDATE();
+                                           
+                        SELECT @dob = BirthDate FROM inserted;
+                                                   
+                        IF (DATEDIFF(year, @dob, @currentDate) >= 18)
+                        BEGIN
+                    		INSERT INTO Staff (FullName, Sex, BirthDate, PhoneNumber, Position, StartDate, EndDate, MonthlySalary)
+                            SELECT FullName, Sex, BirthDate, PhoneNumber, Position, StartDate, EndDate, MonthlySalary
+                            FROM inserted;
+                    	END
+                        ELSE
+                        BEGIN
+                    		PRINT 'Chua du tuoi!'
+                            ROLLBACK;
+                    	END
+                    END;                 
+            """;
     // ------------------------------------------------
     
     public static void main(String[] args) {
@@ -311,6 +337,7 @@ public class DatabaseInit {
             DbOperations.updateData(defaultDeliveryInfoTrigger, "", false);
             DbOperations.updateData(delCategoryTrigger, "", false);
             DbOperations.updateData(checkLegitofUserAgeTrigger, "", false);
+            DbOperations.updateData(checkLegitofStaffAgeTrigger, "", false);
 //            DbOperations.updateData(randomUsers, "Random data inserted successfully");
             
         } catch (Exception e) {

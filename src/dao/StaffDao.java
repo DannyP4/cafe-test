@@ -115,7 +115,14 @@ public class StaffDao {
             staff.getEndDate() == null ? null : staff.getEndDate().toString(),
             staff.getMonthlySalary()
         };
-        DbOperations.updateData(query, args, "New staff added successfully!");
+
+        int result = DbOperations.updateData(query, args, "");
+
+        if (result == -1) {
+            JOptionPane.showMessageDialog(null, "Not old enough to become a staff");
+        } else {
+            JOptionPane.showMessageDialog(null, "New staff added successfully!");
+        }
     }
 
     public void updateStaff(Staff staff) {
