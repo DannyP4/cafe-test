@@ -145,7 +145,7 @@ public class ViewOrderDetails extends javax.swing.JFrame {
 
             },
             new String [] {
-                "No.", "Product", "Unit Price", "Quantity", "Subtotal", "Final cost"
+                "No.", "Product", "Unit Price", "Quantity", "Subtotal"
             }
         ));
         jScrollPane1.setViewportView(tblItems);
@@ -256,13 +256,20 @@ public class ViewOrderDetails extends javax.swing.JFrame {
 
         DefaultTableModel tableModel = (DefaultTableModel) tblItems.getModel();
         order.getItems().forEach(item -> {
-            tableModel.addRow(new Object[]{tableModel.getRowCount() + 1, item.getProduct().getName(), item.getUnitPrice(), item.getQuantity(), item.getTotalAmount()});
+            tableModel.addRow(new Object[]{
+                    tableModel.getRowCount() + 1,          // No.
+                    item.getProduct().getName(),           // Product
+                    item.getUnitPrice(),                   // Unit Price
+                    item.getQuantity(),                    // Quantity
+                    item.getTotalAmount(),                 // Subtotal
+            });
         });
+
     }//GEN-LAST:event_formComponentShown
 
     private void btnInvoiceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInvoiceActionPerformed
         JFileChooser fileChooser = new JFileChooser();
-        fileChooser.setSelectedFile(new File("order-invoice-%d.pdf".formatted(orderId)));
+        fileChooser.setSelectedFile(new File("bill-%d.pdf".formatted(orderId)));
         FileNameExtensionFilter filter = new FileNameExtensionFilter("PDF Files", "pdf");
         fileChooser.setFileFilter(filter);
 
@@ -281,7 +288,7 @@ public class ViewOrderDetails extends javax.swing.JFrame {
             PdfWriter.getInstance(doc, new FileOutputStream(filePath));
             doc.open();
 
-            Paragraph cafeName = new Paragraph("                                                        Cafe Shop\n");
+            Paragraph cafeName = new Paragraph("                                                                    Cafe Shop\n");
             doc.add(cafeName);
 
             Paragraph starLine = new Paragraph("****************************************************************************************************************\n");
