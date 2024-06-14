@@ -12,6 +12,9 @@ import javax.swing.JOptionPane;
 import model.Order;
 import model.OrderDetails;
 import model.Status;
+import java.time.LocalDate;
+import dao.UserDao;
+import model.User;
 
 /**
  *
@@ -107,7 +110,33 @@ public class OrderDao {
         }
     }
 
+    private double calculateDiscount(User user, double total) {
+        LocalDate today = LocalDate.now();
+        LocalDate userBirthday = user.getBirthDate();
+
+        // Điều chỉnh năm sinh nhật để so sánh với năm hiện tại
+        userBirthday = userBirthday.withYear(today.getYear());
+
+        double discount = 0.0;
+
+        // Kiểm tra nếu hôm nay là sinh nhật người dùng
+        if (today.isEqual(userBirthday)) {
+            // Giảm giá 30% vào sinh nhật
+            discount = total * 0.30;
+        } else if (today.getDayOfMonth() == 1) {
+            // Giảm giá 20% vào mùng 1 hàng tháng
+            discount = total * 0.20;
+        }
+        return discount;
+    }
+
     public void saveOrder(Order order) {
+        UserDao userDao = UserDao.getInstance();
+        User user = userDao.getById(order.getUser().getId());
+
+        double discount = calculateDiscount(user, order.getTotalCost());
+        order.setDiscount(discount);
+
         String insertOrder = "INSERT INTO [Order] (UserId, TotalCost, ShipCost, Discount, DeliveryInfoId, PaymentMethod, PaymentInfoId, StatusId) "
                 + "VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
         Object[] args = {order.getUser().getId(), order.getTotalCost(), order.getShipCost(), order.getDiscount(), order.getDeliveryInfo().getId(), order.getPaymentMethodId(), order.getPaymentInfo() == null ? null : order.getPaymentInfo().getId(), 1};

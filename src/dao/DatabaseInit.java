@@ -168,7 +168,7 @@ public class DatabaseInit {
 
     private static final String orderTable
             = """
-            CREATE TABLE [Order] (
+           CREATE TABLE [Order] (
                 Id INT PRIMARY KEY IDENTITY(1,1),
                 UserId INT NOT NULL,
                 CreatedAt DATETIME DEFAULT CURRENT_TIMESTAMP,
@@ -188,7 +188,7 @@ public class DatabaseInit {
                 FOREIGN KEY (PaymentInfoId) REFERENCES PaymentInfo(Id),
                 FOREIGN KEY (ShipperId) REFERENCES Staff(Id) ON DELETE SET NULL,
                 FOREIGN KEY (StatusId) REFERENCES Status(Id)
-            );
+            ); 
             """;
 
     private static final String orderDetailsTable

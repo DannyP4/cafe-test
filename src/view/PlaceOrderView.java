@@ -66,11 +66,8 @@ public class PlaceOrderView extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         rbtnCredit = new javax.swing.JRadioButton();
         rbtnCOD = new javax.swing.JRadioButton();
-        //jScrollPane3 = new javax.swing.JScrollPane();
-        //tblVouchers = new javax.swing.JTable();
         btnRemovePaymentInfo = new javax.swing.JButton();
         btnAddPaymentInfo = new javax.swing.JButton();
-        //jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         btnPurchase = new javax.swing.JButton();
         lblTotal = new javax.swing.JLabel();

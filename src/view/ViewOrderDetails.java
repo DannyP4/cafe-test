@@ -6,6 +6,7 @@ package view;
 
 import com.itextpdf.text.Document;
 import com.itextpdf.text.Paragraph;
+import com.itextpdf.text.Phrase;
 import com.itextpdf.text.pdf.PdfPTable;
 import com.itextpdf.text.pdf.PdfWriter;
 import common.OpenPdf;
@@ -22,6 +23,7 @@ import model.DeliveryInfo;
 import model.Order;
 import model.Staff;
 import model.User;
+import java.util.Objects;
 
 
 
@@ -143,7 +145,7 @@ public class ViewOrderDetails extends javax.swing.JFrame {
 
             },
             new String [] {
-                "No.", "Product", "Unit Price", "Quantity", "Subtotal"
+                "No.", "Product", "Unit Price", "Quantity", "Subtotal", "Final cost"
             }
         ));
         jScrollPane1.setViewportView(tblItems);
@@ -285,28 +287,41 @@ public class ViewOrderDetails extends javax.swing.JFrame {
             Paragraph starLine = new Paragraph("****************************************************************************************************************\n");
             doc.add(starLine);
 
-            Paragraph info = new Paragraph("\tOrder ID: " + orderId
-                    + "\n\tCustomer name: " + order.getUser().getFullName()
-                    + "\n\tCreated at: " + Utils.formatTimestamp(order.getCreatedAt())
-                    + "\n\tTotal cost: $ " + order.getTotalCost()
-                    + "\n\tShipping cost: $ " + order.getShipCost()
-                    + "\n\tDiscount: - $ " + order.getDiscount()
-                    + "\n\tFinal cost: $ " + order.getFinalCost());
+            Paragraph info = new Paragraph();
+            info.add(new Phrase("\tOrder ID: " + orderId + "\n"));
+            info.add(new Phrase("\tCustomer name: " + order.getUser().getFullName() + "\n"));
+            info.add(new Phrase("\tCreated at: " + Utils.formatTimestamp(order.getCreatedAt()) + "\n"));
+            info.add(new Phrase("\tTotal cost: $ " + String.format("%.2f", order.getTotalCost()) + "\n"));
+            info.add(new Phrase("\tShipping cost: $ " + String.format("%.2f", order.getShipCost()) + "\n"));
+            info.add(new Phrase("\tDiscount: - $ " + String.format("%.2f", order.getDiscount()) + "\n"));
+            info.add(new Phrase("\tFinal cost: $ " + String.format("%.2f", order.getFinalCost()) + "\n"));
+
             doc.add(info);
             doc.add(starLine);
 
-            PdfPTable tb1 = new PdfPTable(5);
+            PdfPTable tb1 = new PdfPTable(6);
             tb1.addCell("No.");
             tb1.addCell("Product");
             tb1.addCell("Unit price");
             tb1.addCell("Quantity");
             tb1.addCell("Subtotal");
+            tb1.addCell("Final cost");
+            DefaultTableModel tableModel = (DefaultTableModel) tblItems.getModel();
             for (int i = 0; i < tblItems.getRowCount(); i++) {
-                tb1.addCell(tblItems.getValueAt(i, 0).toString());
-                tb1.addCell(tblItems.getValueAt(i, 1).toString());
-                tb1.addCell("$ " + tblItems.getValueAt(i, 2).toString());
-                tb1.addCell(tblItems.getValueAt(i, 3).toString());
-                tb1.addCell("$ " + tblItems.getValueAt(i, 4).toString());
+                String no = String.valueOf(i + 1);
+                String product = Objects.toString(tableModel.getValueAt(i, 1), "");
+                String unitPrice = "$ " + Objects.toString(tableModel.getValueAt(i, 2), "");
+                String quantity = Objects.toString(tableModel.getValueAt(i, 3), "");
+                String subtotal = "$ " + Objects.toString(tableModel.getValueAt(i, 4), "");
+                double itemFinalCost = Double.parseDouble(subtotal.replace("$", "")) + order.getShipCost() / tblItems.getRowCount() - order.getDiscount() / tblItems.getRowCount();
+                String finalCost = "$ " + String.format("%.2f", itemFinalCost);
+
+                tb1.addCell(no);
+                tb1.addCell(product);
+                tb1.addCell(unitPrice);
+                tb1.addCell(quantity);
+                tb1.addCell(subtotal);
+                tb1.addCell(finalCost);
             }
             doc.add(tb1);
             doc.add(starLine);
@@ -320,8 +335,9 @@ public class ViewOrderDetails extends javax.swing.JFrame {
             }
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, e);
+        } finally {
+            doc.close();
         }
-        doc.close();
     }//GEN-LAST:event_btnInvoiceActionPerformed
 
     /**
