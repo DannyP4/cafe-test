@@ -17,5 +17,4 @@ public class OrderDetails {
     private int quantity;
     private double unitPrice;
     private double totalAmount;
-    private double finalPrice;
 }

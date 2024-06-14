@@ -100,7 +100,6 @@ public class OrderDao {
                     orderDetails.setQuantity(rs.getInt("Quantity"));
                     orderDetails.setUnitPrice(rs.getDouble("UnitPrice"));
                     orderDetails.setTotalAmount(rs.getDouble("TotalAmount"));
-                    //orderDetails.setFinalPrice(rs.getDouble("FinalPrice"));
                     order.getItems().add(orderDetails);
                 }
             }
