@@ -344,7 +344,7 @@ public class PlaceOrderView extends javax.swing.JFrame {
 
     private double total;
     private double shipCost = 1;
-    private double discount = 0;
+    private double discount;
     private double finalCost;
 
     private void formComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_formComponentShown

@@ -110,6 +110,29 @@ public class OrderDao {
         }
     }
 
+    // Kiểm tra xem đã sử dụng discount chưa?
+    private boolean hasReceivedBirthdayDiscountThisYear(int userId) {
+        try {
+            LocalDate startOfYear = LocalDate.now().withDayOfYear(1);
+            LocalDate endOfYear = LocalDate.now().withMonth(12).withDayOfMonth(31);
+
+            // Truy vấn tìm ra đã sử dụng discount chưa, nếu rồi trả về true
+            String query = """
+                    SELECT COUNT(*) AS Count FROM [Order] WHERE UserId = ?
+                    AND Discount > 0 AND CreatedAt >= ? AND CreatedAt <= ?
+                    """;
+            Object[] args = {userId, startOfYear.toString(), endOfYear.toString()};
+            ResultSet rs = DbOperations.getData(query, args);
+
+            if (rs.next()) {
+                return rs.getInt("Count") > 0;
+            }
+        } catch (Exception ex) {
+            JOptionPane.showMessageDialog(null, ex);
+        }
+        return false;
+    }
+
     private double calculateDiscount(User user, double total) {
         LocalDate today = LocalDate.now();
         LocalDate userBirthday = user.getBirthDate();
@@ -118,15 +141,21 @@ public class OrderDao {
         userBirthday = userBirthday.withYear(today.getYear());
 
         double discount = 0.0;
+        double maxDiscount = 8.0;
 
         // Kiểm tra nếu hôm nay là sinh nhật người dùng
-        if (today.isEqual(userBirthday)) {
+        if (today.isEqual(userBirthday) && !hasReceivedBirthdayDiscountThisYear(user.getId())) {
             // Giảm giá 30% vào sinh nhật
             discount = total * 0.30;
         } else if (today.getDayOfMonth() == 1) {
             // Giảm giá 20% vào mùng 1 hàng tháng
             discount = total * 0.20;
         }
+
+        // max discount là 8.0$
+        if (discount > maxDiscount)
+            discount = maxDiscount;
+
         return discount;
     }
 
