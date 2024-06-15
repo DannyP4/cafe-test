@@ -15,8 +15,7 @@ import dao.OrderDao;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.time.format.DateTimeFormatter;
-import javax.swing.JFileChooser;
-import javax.swing.JOptionPane;
+import javax.swing.*;
 import javax.swing.filechooser.FileNameExtensionFilter;
 import javax.swing.table.DefaultTableModel;
 import model.DeliveryInfo;
@@ -189,7 +188,7 @@ public class ViewOrderDetails extends javax.swing.JFrame {
         lblDiscount.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         lblDiscount.setForeground(new java.awt.Color(255, 255, 255));
         lblDiscount.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        getContentPane().add(lblDiscount, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 600, 120, 20));
+        //getContentPane().add(lblDiscount, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 600, 120, 20));
 
         lblFinalCost.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         lblFinalCost.setForeground(new java.awt.Color(255, 255, 255));
@@ -249,10 +248,33 @@ public class ViewOrderDetails extends javax.swing.JFrame {
         } else {
             lblShipperPhone.setText("Phone number: " + shipper.getPhoneNumber());
         }
-        lblTotalCost.setText("$ %.2f".formatted(order.getTotalCost()));
-        lblShipCost.setText("$ %.2f".formatted(order.getShipCost()));
-        lblDiscount.setText("- $ %.2f".formatted(order.getDiscount()));
-        lblFinalCost.setText("$ %.2f".formatted(order.getFinalCost()));
+        double TotalCost = order.getTotalCost();
+        double ShipCost = order.getShipCost();
+        double Discount = order.getDiscount();
+        double FinalCost = order.getFinalCost();
+
+        lblTotalCost.setText("$ %.2f".formatted(TotalCost));
+        lblShipCost.setText("$ %.2f".formatted(ShipCost));
+        if (Discount == 0) {
+            lblDiscount.setText("- $ %.2f".formatted(Discount));
+            getContentPane().remove(lblDiscount);
+            getContentPane().add(lblDiscount, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 600, 120, 20));
+        }
+        else if (Discount == TotalCost * 0.3) {
+            lblDiscount.setText("- $ %.2f".formatted(Discount) + " (Happy BirthDay, Discount 30%)");
+            getContentPane().remove(lblDiscount);
+            getContentPane().add(lblDiscount, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 600, 370, 20));
+        }
+        else if (Discount == TotalCost * 0.2) {
+            lblDiscount.setText("- $ %.2f".formatted(Discount) + " (New month, Discount 20%)");
+            getContentPane().remove(lblDiscount);
+            getContentPane().add(lblDiscount, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 600, 370, 20));
+        }
+        lblFinalCost.setText("$ %.2f".formatted(FinalCost));
+
+        getContentPane().setComponentZOrder(lblDiscount, 0);
+        getContentPane().revalidate();
+        getContentPane().repaint();
 
         DefaultTableModel tableModel = (DefaultTableModel) tblItems.getModel();
         order.getItems().forEach(item -> {
