@@ -11,7 +11,7 @@ import dao.PaymentInfoDao;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import javax.swing.JOptionPane;
+import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import model.Cart;
 import model.DeliveryInfo;
@@ -127,15 +127,19 @@ public class PlaceOrderView extends javax.swing.JFrame {
         jLabel4.setText("Ship cost: ");
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 500, -1, -1));
 
-        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel5.setText("Discount:");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 540, 88, -1));
+//        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+//        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+//        jLabel5.setText("-------------------------------------");
+//        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 530, 88, -1));
+
+        JSeparator jSeparator = new JSeparator();
+        jSeparator.setForeground(new java.awt.Color(255, 255, 255));
+        getContentPane().add(jSeparator, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 540, 170, -1));
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Final cost:");
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 590, 88, -1));
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 560, 88, -1));
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
@@ -265,17 +269,17 @@ public class PlaceOrderView extends javax.swing.JFrame {
         lblShipCost.setText("$0,000");
         getContentPane().add(lblShipCost, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 500, 70, -1));
 
-        lblDiscount.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        lblDiscount.setForeground(new java.awt.Color(255, 255, 255));
-        lblDiscount.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        lblDiscount.setText("$0,000");
-        getContentPane().add(lblDiscount, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 540, 70, -1));
+//        lblDiscount.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+//        lblDiscount.setForeground(new java.awt.Color(255, 255, 255));
+//        lblDiscount.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+//        lblDiscount.setText("$0,000");
+//        getContentPane().add(lblDiscount, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 540, 70, -1));
 
         lblFinalCost.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         lblFinalCost.setForeground(new java.awt.Color(255, 255, 255));
         lblFinalCost.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         lblFinalCost.setText("$0,000");
-        getContentPane().add(lblFinalCost, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 590, 70, -1));
+        getContentPane().add(lblFinalCost, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 560, 70, -1));
 
         txtNote.setColumns(18);
         txtNote.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -340,10 +344,9 @@ public class PlaceOrderView extends javax.swing.JFrame {
     DefaultTableModel tblItemsModel;
     DefaultTableModel tblDeliveryModel;
     DefaultTableModel tblPaymentModel;
-    //DefaultTableModel tblVouchersModel;
 
     private double total;
-    private double shipCost = 1;
+    private double shipCost = 2;
     private double discount;
     private double finalCost;
 
@@ -436,7 +439,6 @@ public class PlaceOrderView extends javax.swing.JFrame {
             order.setPaymentMethodId(2);
         }
 
-
         OrderDao.getInstance().saveOrder(order);
 
         setVisible(false);
@@ -478,8 +480,9 @@ public class PlaceOrderView extends javax.swing.JFrame {
 
         lblTotal.setText("$ %.2f".formatted(total));
         lblShipCost.setText("$ %.2f".formatted(shipCost));
-        lblDiscount.setText("- $ %.2f".formatted(discount));
+        //lblDiscount.setText("- $ %.2f".formatted(discount));
         lblFinalCost.setText("$ %.2f".formatted(finalCost));
+        System.out.print(discount);
     }
 
     void loadDeliveryInfos() {
