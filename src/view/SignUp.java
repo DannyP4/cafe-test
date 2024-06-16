@@ -242,6 +242,8 @@ public class SignUp extends javax.swing.JFrame {
         btnSave.setText("Save ");
         btnSave.setBorderPainted(false);
         btnSave.setContentAreaFilled(false);
+        btnSave.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnSave.setEnabled(false);
         btnSave.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSaveActionPerformed(evt);
@@ -254,6 +256,7 @@ public class SignUp extends javax.swing.JFrame {
         btnForgot.setText("Forgot password?");
         btnForgot.setBorderPainted(false);
         btnForgot.setContentAreaFilled(false);
+        btnForgot.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnForgot.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnForgotActionPerformed(evt);
@@ -272,6 +275,7 @@ public class SignUp extends javax.swing.JFrame {
         btnLogin.setText("Login");
         btnLogin.setBorderPainted(false);
         btnLogin.setContentAreaFilled(false);
+        btnLogin.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnLoginActionPerformed(evt);

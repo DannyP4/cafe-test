@@ -15,18 +15,12 @@ public class Login extends javax.swing.JFrame {
 
     private UserDao userdao = new UserDao();
     public String emailPattern = "^[a-zA-Z0-9]+[@]+[a-zA-Z0-9]+[.]+[a-zA-Z0-9]+$";
-    private int count = 0;
 
     public Login() {
         initComponents();
         btnLogin.setEnabled(false);
     }
 
-    public void clear() {
-        txtEmail.setText("");
-        txtPassword.setText("");
-        btnLogin.setEnabled(false);
-    }
     
     public void validateFields() {
         String email = txtEmail.getText();
@@ -36,6 +30,7 @@ public class Login extends javax.swing.JFrame {
         } else {
             btnLogin.setEnabled(false);
         }
+        
     }
     
     public void displaylabelPassword() {
@@ -153,6 +148,7 @@ public class Login extends javax.swing.JFrame {
         btnSignup.setText("Signup");
         btnSignup.setBorderPainted(false);
         btnSignup.setContentAreaFilled(false);
+        btnSignup.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnSignup.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSignupActionPerformed(evt);
@@ -167,6 +163,7 @@ public class Login extends javax.swing.JFrame {
         btnForgot.setText("Forgot password?");
         btnForgot.setBorderPainted(false);
         btnForgot.setContentAreaFilled(false);
+        btnForgot.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnForgot.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnForgotActionPerformed(evt);
@@ -178,6 +175,8 @@ public class Login extends javax.swing.JFrame {
         btnLogin.setText("Login");
         btnLogin.setBorderPainted(false);
         btnLogin.setContentAreaFilled(false);
+        btnLogin.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnLogin.setEnabled(false);
         btnLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnLoginActionPerformed(evt);
@@ -250,36 +249,24 @@ public class Login extends javax.swing.JFrame {
         new NewForgotPasswordPage().setVisible(true);
     }//GEN-LAST:event_btnForgotActionPerformed
 
-    private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {
+    private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
+        String password = txtPassword.getText();
         String email = txtEmail.getText();
-        String password = new String(txtPassword.getPassword());
-        UserDao userDao = new UserDao();
-        User user = userDao.login(email, password);
-
+        User user = null;
+        user = userdao.login(email, password);
         if (user == null) {
-            if (!email.equalsIgnoreCase("admin@gmail.com") && !email.equalsIgnoreCase("duy@gmail.com") && !email.equalsIgnoreCase("huy@gmail.com")) { // Bỏ qua tài khoản admin
-                ++count;
-                JOptionPane.showMessageDialog(null, "<html><b style=\"color:red\">Incorrect email or password</b></html>", "Message", JOptionPane.ERROR_MESSAGE);
-
-                if (count >= 7 && !userDao.checkUserIfBanned(email)) {
-                    // Khóa tài khoản khi nhập sai quá 7 lần
-                    userDao.lockUserByEmail(email);
-                    JOptionPane.showMessageDialog(null, "The account got banned due to entering the wrong password too many times!", "Message", JOptionPane.ERROR_MESSAGE);
-                    count = 0;
-                }
-            } else
-                JOptionPane.showMessageDialog(null, "<html><b style=\"color:red\">Incorrect email or password</b></html>", "Message", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, "<html><b style=\"color:red\">Incorrect email or password</b></html>", "Message", JOptionPane.ERROR_MESSAGE);
         } else {
-            if (!user.isApproved() && !email.equalsIgnoreCase("admin@gmail.com") && !email.equalsIgnoreCase("duy@gmail.com") && !email.equalsIgnoreCase("huy@gmail.com"))
-                JOptionPane.showMessageDialog(null, "<html><b>This account got banned because of suspected, contact Admin (admin@gmail.com) for support!</b></html>", "Message", JOptionPane.ERROR_MESSAGE);
-            else {
+            if (!user.isApproved()) {
+                ImageIcon icon = new ImageIcon("src/popupicon/wait.png");
+                JOptionPane.showMessageDialog(null, "<html><b>Wait for Admin Approval </b></html>", "Message", JOptionPane.INFORMATION_MESSAGE, icon);
+                
+            } else {
                 setVisible(false);
                 new Home(email).setVisible(true);
-                count = 0; // Đặt lại count khi đăng nhập thành công
             }
         }
-    }
-//GEN-LAST:event_btnLoginActionPerformed
+    }//GEN-LAST:event_btnLoginActionPerformed
 
     /**
      * @param args the command line arguments

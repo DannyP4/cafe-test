@@ -39,31 +39,31 @@ public class AddPaymentInfo extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        btnClose = new javax.swing.JButton();
-        txtCardNumber = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
+        Card = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        txtExpYear = new javax.swing.JTextField();
-        txtSecCode = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
-        btnSave = new javax.swing.JButton();
+        Security = new javax.swing.JLabel();
+        Name = new javax.swing.JLabel();
+        Address1 = new javax.swing.JLabel();
+        Year = new javax.swing.JLabel();
+        Address2 = new javax.swing.JLabel();
+        City = new javax.swing.JLabel();
+        Zip = new javax.swing.JLabel();
+        Month = new javax.swing.JLabel();
         btnClear = new javax.swing.JButton();
-        jLabel8 = new javax.swing.JLabel();
-        txtOwnerName = new javax.swing.JTextField();
-        jLabel4 = new javax.swing.JLabel();
+        btnSave = new javax.swing.JButton();
+        btnClose = new javax.swing.JButton();
         txtBillAddr1 = new javax.swing.JTextField();
-        jLabel9 = new javax.swing.JLabel();
         txtExpMonth = new javax.swing.JTextField();
         txtBillAddr2 = new javax.swing.JTextField();
-        jLabel5 = new javax.swing.JLabel();
         txtCity = new javax.swing.JTextField();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
         txtZipCode = new javax.swing.JTextField();
-        jLabel11 = new javax.swing.JLabel();
+        txtOwnerName = new javax.swing.JTextField();
+        txtSecCode = new javax.swing.JTextField();
+        txtExpYear = new javax.swing.JTextField();
+        txtCardNumber = new javax.swing.JTextField();
         cbxCountry = new javax.swing.JComboBox<>();
-        jLabel12 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         addComponentListener(new java.awt.event.ComponentAdapter() {
@@ -73,173 +73,192 @@ public class AddPaymentInfo extends javax.swing.JFrame {
         });
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        btnClose.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/close.png"))); // NOI18N
-        btnClose.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCloseActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btnClose, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 20, -1, -1));
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        txtCardNumber.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        txtCardNumber.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                txtCardNumberKeyReleased(evt);
-            }
-        });
-        getContentPane().add(txtCardNumber, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 80, 291, -1));
+        Card.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        Card.setForeground(new java.awt.Color(153, 153, 153));
+        Card.setText("Card Number *");
+        jPanel1.add(Card, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 128, 120, -1));
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("Card Number *");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 80, 120, -1));
-
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/new product.png"))); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(240, 212, 167));
         jLabel1.setText("New Payment Info");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(14, 15, -1, -1));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 50, -1, -1));
 
-        jLabel7.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel7.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(240, 212, 167));
         jLabel7.setText("/");
-        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 120, -1, -1));
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 160, 10, 30));
 
-        txtExpYear.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        txtExpYear.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                txtExpYearKeyReleased(evt);
+        Security.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        Security.setForeground(new java.awt.Color(153, 153, 153));
+        Security.setText("Security Code *");
+        jPanel1.add(Security, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 208, -1, -1));
+
+        Name.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        Name.setForeground(new java.awt.Color(153, 153, 153));
+        Name.setText("Owner Name *");
+        jPanel1.add(Name, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 248, -1, -1));
+
+        Address1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        Address1.setForeground(new java.awt.Color(153, 153, 153));
+        Address1.setText("Billing Address Line 1");
+        jPanel1.add(Address1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 287, -1, -1));
+
+        Year.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        Year.setForeground(new java.awt.Color(153, 153, 153));
+        Year.setText("Year");
+        jPanel1.add(Year, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 168, -1, -1));
+
+        Address2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        Address2.setForeground(new java.awt.Color(153, 153, 153));
+        Address2.setText("Billing Address Line 2");
+        jPanel1.add(Address2, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 328, -1, -1));
+
+        City.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        City.setForeground(new java.awt.Color(153, 153, 153));
+        City.setText("City");
+        jPanel1.add(City, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 368, -1, -1));
+
+        Zip.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        Zip.setForeground(new java.awt.Color(153, 153, 153));
+        Zip.setText("Zip Code");
+        jPanel1.add(Zip, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 408, -1, -1));
+
+        Month.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        Month.setForeground(new java.awt.Color(153, 153, 153));
+        Month.setText("Month");
+        jPanel1.add(Month, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 168, -1, -1));
+
+        btnClear.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnClear.setForeground(new java.awt.Color(240, 212, 167));
+        btnClear.setText("Clear");
+        btnClear.setBorderPainted(false);
+        btnClear.setContentAreaFilled(false);
+        btnClear.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnClear.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnClearActionPerformed(evt);
             }
         });
-        getContentPane().add(txtExpYear, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 120, 50, -1));
-
-        txtSecCode.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        txtSecCode.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                txtSecCodeKeyReleased(evt);
-            }
-        });
-        getContentPane().add(txtSecCode, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 160, 291, -1));
-
-        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setText("Security Code *");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 160, -1, -1));
+        jPanel1.add(btnClear, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 490, -1, -1));
 
         btnSave.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btnSave.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/save.png"))); // NOI18N
+        btnSave.setForeground(new java.awt.Color(240, 212, 167));
         btnSave.setText("Save");
+        btnSave.setBorderPainted(false);
+        btnSave.setContentAreaFilled(false);
+        btnSave.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnSave.setEnabled(false);
         btnSave.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSaveActionPerformed(evt);
             }
         });
-        getContentPane().add(btnSave, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 470, -1, -1));
+        jPanel1.add(btnSave, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 490, -1, -1));
 
-        btnClear.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btnClear.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/clear.png"))); // NOI18N
-        btnClear.setText("Clear");
-        btnClear.addActionListener(new java.awt.event.ActionListener() {
+        btnClose.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/close.png"))); // NOI18N
+        btnClose.setContentAreaFilled(false);
+        btnClose.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnClose.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnClearActionPerformed(evt);
+                btnCloseActionPerformed(evt);
             }
         });
-        getContentPane().add(btnClear, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 470, -1, -1));
+        jPanel1.add(btnClose, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 30, -1, -1));
 
-        jLabel8.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel8.setText("Owner Name *");
-        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 200, -1, -1));
-
-        txtOwnerName.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        txtOwnerName.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                txtOwnerNameKeyReleased(evt);
-            }
-        });
-        getContentPane().add(txtOwnerName, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 200, 291, -1));
-
-        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setText("Billing Address Line 1");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 240, -1, -1));
-
+        txtBillAddr1.setBackground(new java.awt.Color(250, 242, 228));
         txtBillAddr1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txtBillAddr1.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 txtBillAddr1KeyReleased(evt);
             }
         });
-        getContentPane().add(txtBillAddr1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 240, 291, -1));
+        jPanel1.add(txtBillAddr1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 280, 291, 30));
 
-        jLabel9.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel9.setText("Expiration Date *");
-        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 120, -1, -1));
-
+        txtExpMonth.setBackground(new java.awt.Color(250, 242, 228));
         txtExpMonth.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txtExpMonth.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 txtExpMonthKeyReleased(evt);
             }
         });
-        getContentPane().add(txtExpMonth, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 120, 50, -1));
+        jPanel1.add(txtExpMonth, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 160, 130, 30));
 
+        txtBillAddr2.setBackground(new java.awt.Color(250, 242, 228));
         txtBillAddr2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txtBillAddr2.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 txtBillAddr2KeyReleased(evt);
             }
         });
-        getContentPane().add(txtBillAddr2, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 280, 291, -1));
+        jPanel1.add(txtBillAddr2, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 320, 291, 30));
 
-        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel5.setText("Billing Address Line 2");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 280, -1, -1));
-
+        txtCity.setBackground(new java.awt.Color(250, 242, 228));
         txtCity.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txtCity.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 txtCityKeyReleased(evt);
             }
         });
-        getContentPane().add(txtCity, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 320, 291, -1));
+        jPanel1.add(txtCity, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 360, 291, 30));
 
-        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel6.setText("City");
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 320, -1, -1));
-
-        jLabel10.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel10.setText("Zip Code");
-        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 360, -1, -1));
-
+        txtZipCode.setBackground(new java.awt.Color(250, 242, 228));
         txtZipCode.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txtZipCode.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 txtZipCodeKeyReleased(evt);
             }
         });
-        getContentPane().add(txtZipCode, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 360, 291, -1));
+        jPanel1.add(txtZipCode, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 400, 291, 30));
 
-        jLabel11.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel11.setText("Country *");
-        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 400, -1, -1));
+        txtOwnerName.setBackground(new java.awt.Color(250, 242, 228));
+        txtOwnerName.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        txtOwnerName.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtOwnerNameKeyReleased(evt);
+            }
+        });
+        jPanel1.add(txtOwnerName, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 240, 291, 30));
 
+        txtSecCode.setBackground(new java.awt.Color(250, 242, 228));
+        txtSecCode.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        txtSecCode.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtSecCodeKeyReleased(evt);
+            }
+        });
+        jPanel1.add(txtSecCode, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 200, 291, 30));
+
+        txtExpYear.setBackground(new java.awt.Color(250, 242, 228));
+        txtExpYear.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        txtExpYear.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtExpYearKeyReleased(evt);
+            }
+        });
+        jPanel1.add(txtExpYear, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 160, 130, 30));
+
+        txtCardNumber.setBackground(new java.awt.Color(250, 242, 228));
+        txtCardNumber.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        txtCardNumber.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtCardNumberKeyReleased(evt);
+            }
+        });
+        jPanel1.add(txtCardNumber, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 120, 291, 30));
+
+        cbxCountry.setBackground(new java.awt.Color(250, 242, 228));
         cbxCountry.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         cbxCountry.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cbxCountryActionPerformed(evt);
             }
         });
-        getContentPane().add(cbxCountry, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 400, 291, -1));
+        jPanel1.add(cbxCountry, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 440, 291, 30));
 
-        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/full-page-background.PNG"))); // NOI18N
-        getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -140, 690, 690));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 770, 590));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -378,6 +397,46 @@ public class AddPaymentInfo extends javax.swing.JFrame {
         } catch (Exception ex) {
             btnSave.setEnabled(false);
         }
+        if (txtCardNumber.getText().equals("")) {
+            Card.setVisible(true);
+        } else {
+            Card.setVisible(false);
+        }
+        if (txtExpMonth.getText().equals("")) {
+            Month.setVisible(true);
+        } else {
+            Month.setVisible(false);
+        }if (txtExpYear.getText().equals("")) {
+            Year.setVisible(true);
+        } else {
+            Year.setVisible(false);
+        }if (txtSecCode.getText().equals("")) {
+            Security.setVisible(true);
+        } else {
+            Security.setVisible(false);
+        }if (txtOwnerName.getText().equals("")) {
+            Name.setVisible(true);
+        } else {
+            Name.setVisible(false);
+        }
+        if (txtBillAddr1.getText().equals("")) {
+            Address1.setVisible(true);
+        } else {
+            Address1.setVisible(false);
+        }if (txtBillAddr2.getText().equals("")) {
+            Address2.setVisible(true);
+        } else {
+            Address2.setVisible(false);
+        }if (txtCity.getText().equals("")) {
+            City.setVisible(true);
+        } else {
+            City.setVisible(false);
+        }if (txtZipCode.getText().equals("")) {
+            Zip.setVisible(true);
+        } else {
+            Zip.setVisible(false);
+        }
+        
     }
 
     /**
@@ -416,22 +475,22 @@ public class AddPaymentInfo extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Address1;
+    private javax.swing.JLabel Address2;
+    private javax.swing.JLabel Card;
+    private javax.swing.JLabel City;
+    private javax.swing.JLabel Month;
+    private javax.swing.JLabel Name;
+    private javax.swing.JLabel Security;
+    private javax.swing.JLabel Year;
+    private javax.swing.JLabel Zip;
     private javax.swing.JButton btnClear;
     private javax.swing.JButton btnClose;
     private javax.swing.JButton btnSave;
     private javax.swing.JComboBox<String> cbxCountry;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField txtBillAddr1;
     private javax.swing.JTextField txtBillAddr2;
     private javax.swing.JTextField txtCardNumber;

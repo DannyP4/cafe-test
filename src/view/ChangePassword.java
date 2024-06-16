@@ -91,7 +91,7 @@ public class ChangePassword extends javax.swing.JFrame {
         Old.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         Old.setForeground(new java.awt.Color(153, 153, 153));
         Old.setText("Old Password");
-        jPanel1.add(Old, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 130, -1, 30));
+        jPanel1.add(Old, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 130, -1, 30));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(240, 212, 167));
@@ -101,12 +101,12 @@ public class ChangePassword extends javax.swing.JFrame {
         New.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         New.setForeground(new java.awt.Color(153, 153, 153));
         New.setText("New Password");
-        jPanel1.add(New, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 180, -1, 30));
+        jPanel1.add(New, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 180, -1, 30));
 
         Confirm.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         Confirm.setForeground(new java.awt.Color(153, 153, 153));
         Confirm.setText("Confirm Password");
-        jPanel1.add(Confirm, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 230, -1, 30));
+        jPanel1.add(Confirm, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 230, -1, 30));
 
         txtOldPassword.setBackground(new java.awt.Color(250, 242, 228));
         txtOldPassword.setFont(new java.awt.Font("Yu Gothic UI", 1, 14)); // NOI18N
@@ -140,6 +140,7 @@ public class ChangePassword extends javax.swing.JFrame {
         btnUpdate.setText("Update");
         btnUpdate.setBorderPainted(false);
         btnUpdate.setContentAreaFilled(false);
+        btnUpdate.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnUpdate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnUpdateActionPerformed(evt);

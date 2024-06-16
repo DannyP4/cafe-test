@@ -119,6 +119,7 @@ public class NewForgotPasswordPage extends javax.swing.JFrame {
         btnUpdate.setText("Update");
         btnUpdate.setBorderPainted(false);
         btnUpdate.setContentAreaFilled(false);
+        btnUpdate.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnUpdate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnUpdateActionPerformed(evt);
@@ -131,6 +132,7 @@ public class NewForgotPasswordPage extends javax.swing.JFrame {
         btnLogin.setText("Login");
         btnLogin.setBorderPainted(false);
         btnLogin.setContentAreaFilled(false);
+        btnLogin.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnLoginActionPerformed(evt);
@@ -143,6 +145,7 @@ public class NewForgotPasswordPage extends javax.swing.JFrame {
         btnSignup.setText("Sign up");
         btnSignup.setBorderPainted(false);
         btnSignup.setContentAreaFilled(false);
+        btnSignup.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnSignup.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSignupActionPerformed(evt);
@@ -202,6 +205,7 @@ public class NewForgotPasswordPage extends javax.swing.JFrame {
         btnSearch.setForeground(new java.awt.Color(204, 0, 0));
         btnSearch.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/search.png"))); // NOI18N
         btnSearch.setToolTipText("");
+        btnSearch.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnSearch.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSearchActionPerformed(evt);

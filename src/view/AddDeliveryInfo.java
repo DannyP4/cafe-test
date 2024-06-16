@@ -37,17 +37,17 @@ public class AddDeliveryInfo extends javax.swing.JFrame {
 
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        txtAddress = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
-        btnSave = new javax.swing.JButton();
-        btnClear = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
+        Name = new javax.swing.JLabel();
+        Address = new javax.swing.JLabel();
+        Phone = new javax.swing.JLabel();
         btnClose = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        txtRecipientName = new javax.swing.JTextField();
-        jLabel7 = new javax.swing.JLabel();
         txtPhoneNumber = new javax.swing.JTextField();
-        jLabel8 = new javax.swing.JLabel();
+        txtRecipientName = new javax.swing.JTextField();
+        txtAddress = new javax.swing.JTextField();
+        btnSave = new javax.swing.JButton();
+        btnClear = new javax.swing.JButton();
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/small-page-background.png"))); // NOI18N
 
@@ -56,44 +56,23 @@ public class AddDeliveryInfo extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("Recipient Name");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 110, 120, -1));
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        txtAddress.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        txtAddress.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                txtAddressKeyReleased(evt);
-            }
-        });
-        getContentPane().add(txtAddress, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 190, 291, -1));
+        Name.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        Name.setForeground(new java.awt.Color(153, 153, 153));
+        Name.setText("Recipient Name");
+        jPanel1.add(Name, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 128, 120, -1));
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setText("Address");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 190, -1, -1));
+        Address.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        Address.setForeground(new java.awt.Color(153, 153, 153));
+        Address.setText("Address");
+        jPanel1.add(Address, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 228, -1, -1));
 
-        btnSave.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btnSave.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/save.png"))); // NOI18N
-        btnSave.setText("Save");
-        btnSave.setEnabled(false);
-        btnSave.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnSaveActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btnSave, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 250, -1, -1));
-
-        btnClear.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btnClear.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/clear.png"))); // NOI18N
-        btnClear.setText("Clear");
-        btnClear.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnClearActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btnClear, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 250, -1, -1));
+        Phone.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        Phone.setForeground(new java.awt.Color(153, 153, 153));
+        Phone.setText("Phone Number");
+        jPanel1.add(Phone, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 178, -1, -1));
 
         btnClose.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/close.png"))); // NOI18N
         btnClose.addActionListener(new java.awt.event.ActionListener() {
@@ -101,37 +80,69 @@ public class AddDeliveryInfo extends javax.swing.JFrame {
                 btnCloseActionPerformed(evt);
             }
         });
-        getContentPane().add(btnClose, new org.netbeans.lib.awtextra.AbsoluteConstraints(668, 15, -1, -1));
+        jPanel1.add(btnClose, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 10, -1, -1));
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/new product.png"))); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(240, 212, 167));
         jLabel1.setText("New Delivery Info");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(14, 15, -1, -1));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 70, -1, -1));
 
-        txtRecipientName.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        txtRecipientName.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                txtRecipientNameKeyReleased(evt);
-            }
-        });
-        getContentPane().add(txtRecipientName, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 110, 291, -1));
-
-        jLabel7.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel7.setText("Phone Number");
-        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 150, -1, -1));
-
+        txtPhoneNumber.setBackground(new java.awt.Color(250, 242, 228));
         txtPhoneNumber.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txtPhoneNumber.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 txtPhoneNumberKeyReleased(evt);
             }
         });
-        getContentPane().add(txtPhoneNumber, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 150, 291, -1));
+        jPanel1.add(txtPhoneNumber, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 170, 291, 30));
 
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/small-page-background.png"))); // NOI18N
-        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, -1));
+        txtRecipientName.setBackground(new java.awt.Color(250, 242, 228));
+        txtRecipientName.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        txtRecipientName.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtRecipientNameKeyReleased(evt);
+            }
+        });
+        jPanel1.add(txtRecipientName, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 120, 291, 30));
+
+        txtAddress.setBackground(new java.awt.Color(250, 242, 228));
+        txtAddress.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        txtAddress.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtAddressKeyReleased(evt);
+            }
+        });
+        jPanel1.add(txtAddress, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 220, 291, 30));
+
+        btnSave.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnSave.setForeground(new java.awt.Color(240, 212, 167));
+        btnSave.setText("Save");
+        btnSave.setBorderPainted(false);
+        btnSave.setContentAreaFilled(false);
+        btnSave.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnSave.setEnabled(false);
+        btnSave.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSaveActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnSave, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 270, -1, -1));
+
+        btnClear.setBackground(new java.awt.Color(240, 212, 167));
+        btnClear.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnClear.setForeground(new java.awt.Color(240, 212, 167));
+        btnClear.setText("Clear");
+        btnClear.setBorderPainted(false);
+        btnClear.setContentAreaFilled(false);
+        btnClear.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnClear.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnClearActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnClear, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 270, -1, -1));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 390));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -176,6 +187,21 @@ public class AddDeliveryInfo extends javax.swing.JFrame {
         } else {
             btnSave.setEnabled(false);
         }
+        if (txtRecipientName.getText().equals("")) {
+            Name.setVisible(true);
+        } else {
+            Name.setVisible(false);
+        }
+        if (txtPhoneNumber.getText().equals("")) {
+            Phone.setVisible(true);
+        } else {
+            Phone.setVisible(false);
+        }
+        if (txtAddress.getText().equals("")) {
+            Address.setVisible(true);
+        } else {
+            Address.setVisible(false);
+        }
     }
 
     /**
@@ -214,16 +240,16 @@ public class AddDeliveryInfo extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Address;
+    private javax.swing.JLabel Name;
+    private javax.swing.JLabel Phone;
     private javax.swing.JButton btnClear;
     private javax.swing.JButton btnClose;
     private javax.swing.JButton btnSave;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField txtAddress;
     private javax.swing.JTextField txtPhoneNumber;
     private javax.swing.JTextField txtRecipientName;

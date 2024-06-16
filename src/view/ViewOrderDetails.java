@@ -261,14 +261,14 @@ public class ViewOrderDetails extends javax.swing.JFrame {
             getContentPane().add(lblDiscount, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 600, 120, 20));
         }
         else if (Discount == TotalCost * 0.3) {
-            lblDiscount.setText("- $ %.2f".formatted(Discount) + " (Happy BirthDay, Discount 30%, only first time)");
+            lblDiscount.setText("- $ %.2f".formatted(Discount) + " (Happy BirthDay, Discount 30%)");
             getContentPane().remove(lblDiscount);
-            getContentPane().add(lblDiscount, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 600, 484, 20));
+            getContentPane().add(lblDiscount, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 600, 370, 20));
         }
         else if (Discount == TotalCost * 0.2) {
-            lblDiscount.setText("- $ %.2f".formatted(Discount) + " (New month, Discount 20%, only first time)");
+            lblDiscount.setText("- $ %.2f".formatted(Discount) + " (New month, Discount 20%)");
             getContentPane().remove(lblDiscount);
-            getContentPane().add(lblDiscount, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 600, 484, 20));
+            getContentPane().add(lblDiscount, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 600, 370, 20));
         }
         lblFinalCost.setText("$ %.2f".formatted(FinalCost));
 

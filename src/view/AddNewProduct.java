@@ -11,7 +11,7 @@ import model.Product;
 
 public class AddNewProduct extends javax.swing.JFrame {
     
-    private CategoryDao categoryDao = CategoryDao.getInstance();
+    private final CategoryDao categoryDao = CategoryDao.getInstance();
 
     /**
      * Creates new form AddNewProduct
@@ -24,10 +24,21 @@ public class AddNewProduct extends javax.swing.JFrame {
     public void validateFields(){
         String name = txtName.getText();
         String price = txtPrice.getText();
-        if(!name.equals("") && !price.equals(""))
+        if(!name.equals("") && !price.equals("")){
             btnSave.setEnabled(true);
-        else
+        }else{
             btnSave.setEnabled(false);
+        }
+        if (name.equals("")) {
+            Name.setVisible(true);
+        } else {
+            Name.setVisible(false);
+        }
+        if (price.equals("")) {
+            Price.setVisible(true);
+        } else {
+            Price.setVisible(false);
+        }
     }
 
     /**
@@ -39,17 +50,16 @@ public class AddNewProduct extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
+        Name = new javax.swing.JLabel();
+        Price = new javax.swing.JLabel();
         txtName = new javax.swing.JTextField();
-        txtCategory = new javax.swing.JComboBox<>();
         txtPrice = new javax.swing.JTextField();
+        txtCategory = new javax.swing.JComboBox<>();
         btnSave = new javax.swing.JButton();
         btnClear = new javax.swing.JButton();
-        jLabel5 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocation(new java.awt.Point(350, 134));
@@ -61,11 +71,76 @@ public class AddNewProduct extends javax.swing.JFrame {
         });
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/new product.png"))); // NOI18N
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(240, 212, 167));
         jLabel1.setText("New Product");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(14, 15, -1, -1));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 80, -1, -1));
+
+        Name.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        Name.setForeground(new java.awt.Color(153, 153, 153));
+        Name.setText("Name");
+        jPanel1.add(Name, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 147, -1, -1));
+
+        Price.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        Price.setForeground(new java.awt.Color(153, 153, 153));
+        Price.setText("Price");
+        jPanel1.add(Price, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 198, -1, -1));
+
+        txtName.setBackground(new java.awt.Color(250, 242, 228));
+        txtName.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        txtName.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtNameKeyReleased(evt);
+            }
+        });
+        jPanel1.add(txtName, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 140, 291, 30));
+
+        txtPrice.setBackground(new java.awt.Color(250, 242, 228));
+        txtPrice.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        txtPrice.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtPriceKeyReleased(evt);
+            }
+        });
+        jPanel1.add(txtPrice, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 190, 291, 30));
+
+        txtCategory.setBackground(new java.awt.Color(250, 242, 228));
+        txtCategory.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        txtCategory.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtCategoryActionPerformed(evt);
+            }
+        });
+        jPanel1.add(txtCategory, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 240, 291, 30));
+
+        btnSave.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnSave.setForeground(new java.awt.Color(240, 212, 167));
+        btnSave.setText("Save");
+        btnSave.setBorderPainted(false);
+        btnSave.setContentAreaFilled(false);
+        btnSave.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnSave.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSaveActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnSave, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 290, -1, -1));
+
+        btnClear.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnClear.setForeground(new java.awt.Color(240, 212, 167));
+        btnClear.setText("Clear");
+        btnClear.setBorderPainted(false);
+        btnClear.setContentAreaFilled(false);
+        btnClear.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnClear.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnClearActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnClear, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 290, -1, -1));
 
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/close.png"))); // NOI18N
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -73,69 +148,9 @@ public class AddNewProduct extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(668, 15, -1, -1));
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 20, -1, -1));
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("Name");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(153, 124, -1, -1));
-
-        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setText("Category");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(153, 159, -1, -1));
-
-        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setText("Price");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(153, 200, -1, -1));
-
-        txtName.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        txtName.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                txtNameKeyReleased(evt);
-            }
-        });
-        getContentPane().add(txtName, new org.netbeans.lib.awtextra.AbsoluteConstraints(264, 121, 291, -1));
-
-        txtCategory.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        txtCategory.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtCategoryActionPerformed(evt);
-            }
-        });
-        getContentPane().add(txtCategory, new org.netbeans.lib.awtextra.AbsoluteConstraints(264, 156, 291, -1));
-
-        txtPrice.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        txtPrice.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                txtPriceKeyReleased(evt);
-            }
-        });
-        getContentPane().add(txtPrice, new org.netbeans.lib.awtextra.AbsoluteConstraints(264, 197, 291, -1));
-
-        btnSave.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btnSave.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/save.png"))); // NOI18N
-        btnSave.setText("Save");
-        btnSave.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnSaveActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btnSave, new org.netbeans.lib.awtextra.AbsoluteConstraints(264, 238, -1, -1));
-
-        btnClear.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btnClear.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/clear.png"))); // NOI18N
-        btnClear.setText("Clear");
-        btnClear.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnClearActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btnClear, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 240, -1, -1));
-
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/small-page-background.png"))); // NOI18N
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, -1));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 400));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -218,14 +233,13 @@ public class AddNewProduct extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Name;
+    private javax.swing.JLabel Price;
     private javax.swing.JButton btnClear;
     private javax.swing.JButton btnSave;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JComboBox<String> txtCategory;
     private javax.swing.JTextField txtName;
     private javax.swing.JTextField txtPrice;
