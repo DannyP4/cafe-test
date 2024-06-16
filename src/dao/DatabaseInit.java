@@ -179,7 +179,6 @@ public class DatabaseInit {
                 DeliveryInfoId INT NOT NULL,
                 PaymentMethod INT NOT NULL,
                 PaymentInfoId INT,
-                Note VARCHAR(100),
                 ShipperId INT,
                 StatusId INT,
                 FOREIGN KEY (UserId) REFERENCES [User](Id) ON DELETE CASCADE,
