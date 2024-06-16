@@ -39,8 +39,6 @@ public class ViewProfile extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         lblName = new javax.swing.JLabel();
-        //lblPoints = new javax.swing.JLabel();
-        //lblRank = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
         lblId = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
@@ -60,7 +58,7 @@ public class ViewProfile extends javax.swing.JFrame {
         btnCancel = new javax.swing.JButton();
         btnSave = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
-        jLabel12 = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(1366, 768));
@@ -71,7 +69,7 @@ public class ViewProfile extends javax.swing.JFrame {
         });
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setBackground(new java.awt.Color(204, 255, 255));
+        jPanel1.setBackground(new java.awt.Color(240, 212, 167));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lblName.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
@@ -86,42 +84,42 @@ public class ViewProfile extends javax.swing.JFrame {
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 110, 350, 490));
 
         lblId.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        lblId.setForeground(new java.awt.Color(255, 255, 255));
+        lblId.setForeground(new java.awt.Color(240, 212, 167));
         lblId.setText("User ID:");
         getContentPane().add(lblId, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 180, -1, -1));
 
         jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setForeground(new java.awt.Color(240, 212, 167));
         jLabel5.setText("Sex:");
         getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 340, 90, -1));
 
         jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setForeground(new java.awt.Color(240, 212, 167));
         jLabel6.setText("Birth date:");
         getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 420, 100, -1));
 
         jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel7.setForeground(new java.awt.Color(240, 212, 167));
         jLabel7.setText("Email: ");
         getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 260, 130, -1));
 
         jLabel8.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel8.setForeground(new java.awt.Color(240, 212, 167));
         jLabel8.setText("Phone number: ");
         getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 340, -1, 30));
 
         jLabel9.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel9.setForeground(new java.awt.Color(240, 212, 167));
         jLabel9.setText("Address: ");
         getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 410, 130, 40));
 
         jLabel10.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
-        jLabel10.setForeground(new java.awt.Color(255, 255, 0));
+        jLabel10.setForeground(new java.awt.Color(240, 212, 167));
         jLabel10.setText("PROFILE ");
         getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 100, -1, -1));
 
         jLabel11.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel11.setForeground(new java.awt.Color(240, 212, 167));
         jLabel11.setText("Full name:");
         getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 260, -1, -1));
 
@@ -169,8 +167,9 @@ public class ViewProfile extends javax.swing.JFrame {
         getContentPane().add(dpBirthDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 420, 230, 30));
 
         btnUpdate.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btnUpdate.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/view edit delete product.png"))); // NOI18N
+        btnUpdate.setForeground(new java.awt.Color(225, 169, 80));
         btnUpdate.setText("Update");
+        btnUpdate.setBorderPainted(false);
         btnUpdate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnUpdateActionPerformed(evt);
@@ -179,8 +178,9 @@ public class ViewProfile extends javax.swing.JFrame {
         getContentPane().add(btnUpdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 550, 120, 40));
 
         btnCancel.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btnCancel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/close.png"))); // NOI18N
+        btnCancel.setForeground(new java.awt.Color(225, 169, 80));
         btnCancel.setText("Cancel");
+        btnCancel.setBorderPainted(false);
         btnCancel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCancelActionPerformed(evt);
@@ -189,8 +189,9 @@ public class ViewProfile extends javax.swing.JFrame {
         getContentPane().add(btnCancel, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 550, 110, 40));
 
         btnSave.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btnSave.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/save.png"))); // NOI18N
+        btnSave.setForeground(new java.awt.Color(225, 169, 80));
         btnSave.setText("Save");
+        btnSave.setBorderPainted(false);
         btnSave.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSaveActionPerformed(evt);
@@ -206,8 +207,9 @@ public class ViewProfile extends javax.swing.JFrame {
         });
         getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1310, 10, -1, -1));
 
-        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/full-page-background.PNG"))); // NOI18N
-        getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -30, 1470, 830));
+        jPanel2.setBackground(new java.awt.Color(153, 153, 153));
+        jPanel2.setForeground(new java.awt.Color(240, 212, 167));
+        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1370, 770));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -355,7 +357,6 @@ public class ViewProfile extends javax.swing.JFrame {
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
@@ -363,6 +364,7 @@ public class ViewProfile extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JLabel lblId;
     private javax.swing.JLabel lblName;
     private javax.swing.JTextField txtAddress;
