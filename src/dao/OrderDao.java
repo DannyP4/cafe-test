@@ -40,12 +40,15 @@ public class OrderDao {
             if (fromDate != null && toDate != null) {
                 query = "SELECT * FROM [Order] WHERE CONVERT(DATE, CreatedAt) BETWEEN ? AND ? ";
             } else {
+                // Nếu fromDate là null, đặt nó thành ngày 1 tháng 1 năm 2000
                 if (fromDate == null) {
                     fromDate = LocalDate.of(2000, 1, 1);
                 }
+                // Nếu toDate là null, đặt nó thành ngày hiện tại
                 if (toDate == null) {
                     toDate = LocalDate.now();
                 }
+                // Truy vấn để lấy ra tối đa 30 đơn hàng giữa fromDate và toDate.
                 query = "SELECT TOP 30 * FROM [Order] WHERE CONVERT(DATE, CreatedAt) BETWEEN ? AND ? ";
             }
             if (userId != -1) {
