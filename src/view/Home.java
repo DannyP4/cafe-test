@@ -66,7 +66,7 @@ public class Home extends javax.swing.JFrame {
         btnStaff = new javax.swing.JButton();
         btnProfile = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -201,14 +201,12 @@ public class Home extends javax.swing.JFrame {
         });
         getContentPane().add(btnProfile, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 40, -1, -1));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/home-image.jpg"))); // NOI18N
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 200, -1, -1));
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/coffee.jpg"))); // NOI18N
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/home-background-image.png"))); // NOI18N
-        jLabel1.setMaximumSize(new java.awt.Dimension(1366, 768));
-        jLabel1.setMinimumSize(new java.awt.Dimension(1366, 768));
-        jLabel1.setPreferredSize(new java.awt.Dimension(1366, 768));
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        jPanel2.setBackground(new java.awt.Color(153, 153, 153));
+        jPanel2.setForeground(new java.awt.Color(240, 212, 167));
+        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1370, 770));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -328,7 +326,7 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JButton btnVoucher;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton6;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JLabel jLabel2;
     // End of variables declaration//GEN-END:variables
 }
