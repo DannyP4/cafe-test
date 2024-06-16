@@ -28,16 +28,6 @@ public class NewForgotPasswordPage extends javax.swing.JFrame {
         txtSecurityQuestion.setEditable(false);
     }
 
-    public void clear() {
-        btnUpdate.setEnabled(false);
-        btnSearch.setEnabled(false);
-        txtEmail.setEditable(true);
-        txtEmail.setText("");
-        txtSecurityQuestion.setText("");
-        txtAnswer.setText("");
-        txtNewPassWord.setText("");
-    }
-
     public void validateEmail() {
         email = txtEmail.getText();
         if (email.matches(emailPattern)) {
@@ -46,7 +36,17 @@ public class NewForgotPasswordPage extends javax.swing.JFrame {
             btnSearch.setEnabled(true);
         }
     }
-
+    
+    public void clear() {
+        btnUpdate.setEnabled(false);
+        btnSearch.setEnabled(false);
+        txtEmail.setEditable(true);
+        txtEmail.setText("");
+        txtSecurityQuestion.setText("");
+        txtAnswer.setText("");
+        txtNewPassWord.setText("");
+   }
+    
     public void validateFields() {
         String pass = txtNewPassWord.getText();
         String answer = txtAnswer.getText();
@@ -56,7 +56,26 @@ public class NewForgotPasswordPage extends javax.swing.JFrame {
         } else {
             btnUpdate.setEnabled(false);
         }
-
+        if (email.equals("")) {
+            Email.setVisible(true);
+        } else {
+            Email.setVisible(false);
+        }
+        if (security.equals("")) {
+            Security.setVisible(true);
+        } else {
+            Security.setVisible(false);
+        }
+        if (answer.equals("")) {
+            Answer.setVisible(true);
+        } else {
+            Answer.setVisible(false);
+        }
+        if (pass.equals("")) {
+            Password.setVisible(true);
+        } else {
+            Password.setVisible(false);
+        }
     }
 
     /**
@@ -68,146 +87,144 @@ public class NewForgotPasswordPage extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
+        jLabel5 = new javax.swing.JLabel();
         btnUpdate = new javax.swing.JButton();
-        txtSecurityQuestion = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
+        btnLogin = new javax.swing.JButton();
         btnSignup = new javax.swing.JButton();
+        Email = new javax.swing.JLabel();
+        Security = new javax.swing.JLabel();
+        Answer = new javax.swing.JLabel();
+        Password = new javax.swing.JLabel();
+        txtSecurityQuestion = new javax.swing.JTextField();
         txtNewPassWord = new javax.swing.JPasswordField();
-        btnClear = new javax.swing.JButton();
-        jLabel3 = new javax.swing.JLabel();
         txtAnswer = new javax.swing.JTextField();
         btnSearch = new javax.swing.JButton();
-        btnLogin = new javax.swing.JButton();
-        jLabel5 = new javax.swing.JLabel();
-        btnExit = new javax.swing.JButton();
-        jLabel4 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         txtEmail = new javax.swing.JTextField();
-        jLabel7 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(1366, 768));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/logo.png"))); // NOI18N
+        jLabel5.setToolTipText("");
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 20, -1, -1));
+
         btnUpdate.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btnUpdate.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/save.png"))); // NOI18N
+        btnUpdate.setForeground(new java.awt.Color(247, 231, 206));
         btnUpdate.setText("Update");
+        btnUpdate.setBorderPainted(false);
+        btnUpdate.setContentAreaFilled(false);
         btnUpdate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnUpdateActionPerformed(evt);
             }
         });
-        getContentPane().add(btnUpdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 450, -1, -1));
+        jPanel1.add(btnUpdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 490, -1, -1));
 
+        btnLogin.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnLogin.setForeground(new java.awt.Color(247, 231, 206));
+        btnLogin.setText("Login");
+        btnLogin.setBorderPainted(false);
+        btnLogin.setContentAreaFilled(false);
+        btnLogin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLoginActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 490, 90, -1));
+
+        btnSignup.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnSignup.setForeground(new java.awt.Color(247, 231, 206));
+        btnSignup.setText("Sign up");
+        btnSignup.setBorderPainted(false);
+        btnSignup.setContentAreaFilled(false);
+        btnSignup.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSignupActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnSignup, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 490, -1, -1));
+
+        Email.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        Email.setForeground(new java.awt.Color(153, 153, 153));
+        Email.setText("Email");
+        jPanel1.add(Email, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 336, -1, -1));
+
+        Security.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        Security.setForeground(new java.awt.Color(153, 153, 153));
+        Security.setText("Your Security Question");
+        jPanel1.add(Security, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 376, -1, -1));
+
+        Answer.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        Answer.setForeground(new java.awt.Color(153, 153, 153));
+        Answer.setText("Your Answer");
+        jPanel1.add(Answer, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 416, -1, -1));
+
+        Password.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        Password.setForeground(new java.awt.Color(153, 153, 153));
+        Password.setText("Enter New Password");
+        jPanel1.add(Password, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 456, -1, -1));
+
+        txtSecurityQuestion.setBackground(new java.awt.Color(250, 242, 228));
         txtSecurityQuestion.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txtSecurityQuestion.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 txtSecurityQuestionKeyReleased(evt);
             }
         });
-        getContentPane().add(txtSecurityQuestion, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 323, 401, -1));
+        jPanel1.add(txtSecurityQuestion, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 370, 401, 30));
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel2.setText("Email");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(306, 285, 166, -1));
-
-        btnSignup.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btnSignup.setText("Sign up");
-        btnSignup.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnSignupActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btnSignup, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 500, -1, -1));
-
+        txtNewPassWord.setBackground(new java.awt.Color(250, 242, 228));
         txtNewPassWord.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txtNewPassWord.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 txtNewPassWordKeyReleased(evt);
             }
         });
-        getContentPane().add(txtNewPassWord, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 405, 401, -1));
+        jPanel1.add(txtNewPassWord, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 450, 401, 30));
 
-        btnClear.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btnClear.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/clear.png"))); // NOI18N
-        btnClear.setText("Clear");
-        btnClear.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnClearActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btnClear, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 450, -1, -1));
-
-        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel3.setText("Your Security Question");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(306, 326, -1, -1));
-
+        txtAnswer.setBackground(new java.awt.Color(250, 242, 228));
         txtAnswer.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txtAnswer.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 txtAnswerKeyReleased(evt);
             }
         });
-        getContentPane().add(txtAnswer, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 364, 401, -1));
+        jPanel1.add(txtAnswer, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 410, 401, 30));
 
-        btnSearch.setBackground(new java.awt.Color(240, 240, 240));
+        btnSearch.setBackground(new java.awt.Color(247, 231, 206));
         btnSearch.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btnSearch.setForeground(new java.awt.Color(204, 0, 0));
         btnSearch.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/search.png"))); // NOI18N
-        btnSearch.setText("Search");
+        btnSearch.setToolTipText("");
         btnSearch.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSearchActionPerformed(evt);
             }
         });
-        getContentPane().add(btnSearch, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 280, -1, -1));
-
-        btnLogin.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btnLogin.setText("Login");
-        btnLogin.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnLoginActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btnLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(802, 500, 90, -1));
-
-        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel5.setText("Enter New Password");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(306, 408, 166, -1));
-
-        btnExit.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btnExit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/exit small.png"))); // NOI18N
-        btnExit.setText("Exit");
-        btnExit.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnExitActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btnExit, new org.netbeans.lib.awtextra.AbsoluteConstraints(801, 450, 90, -1));
-
-        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel4.setText("Your Answer");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(306, 367, 166, -1));
+        jPanel1.add(btnSearch, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 333, -1, -1));
 
         jLabel1.setBackground(new java.awt.Color(240, 240, 240));
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(204, 0, 0));
+        jLabel1.setForeground(new java.awt.Color(247, 231, 206));
         jLabel1.setText("Forgot Password?");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 170, -1, 69));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 230, -1, 69));
 
+        txtEmail.setBackground(new java.awt.Color(250, 242, 228));
         txtEmail.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txtEmail.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 txtEmailKeyReleased(evt);
             }
         });
-        getContentPane().add(txtEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 282, 401, -1));
+        jPanel1.add(txtEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 330, 401, 30));
 
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/first page background.PNG"))); // NOI18N
-        jLabel7.setMaximumSize(new java.awt.Dimension(1366, 768));
-        jLabel7.setMinimumSize(new java.awt.Dimension(1366, 768));
-        jLabel7.setPreferredSize(new java.awt.Dimension(1366, 768));
-        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -40, 1360, 850));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1330, 830));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -217,7 +234,6 @@ public class NewForgotPasswordPage extends javax.swing.JFrame {
         String newPassword = txtNewPassWord.getText();
         if (answer.equals(dbAnswer)) {
             UserDao.updatePassword(email, newPassword);
-            clear();
         }
         else
             JOptionPane.showMessageDialog(null, "<html><b style = \"color:red\">Incorrect Email</b></html>", "Message", JOptionPane.ERROR_MESSAGE);
@@ -231,10 +247,6 @@ public class NewForgotPasswordPage extends javax.swing.JFrame {
     private void txtNewPassWordKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNewPassWordKeyReleased
         validateFields();
     }//GEN-LAST:event_txtNewPassWordKeyReleased
-
-    private void btnClearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClearActionPerformed
-        clear();
-    }//GEN-LAST:event_btnClearActionPerformed
 
     private void txtAnswerKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtAnswerKeyReleased
         validateFields();
@@ -265,15 +277,9 @@ public class NewForgotPasswordPage extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btnSearchActionPerformed
 
-    private void btnExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExitActionPerformed
-        int a = JOptionPane.showConfirmDialog(null, "Do you want to close Application", "Select", JOptionPane.YES_NO_OPTION);
-        if (a == 0) {
-            System.exit(0);
-        }
-    }//GEN-LAST:event_btnExitActionPerformed
-
     private void txtEmailKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtEmailKeyReleased
         validateEmail();
+        validateFields();
     }//GEN-LAST:event_txtEmailKeyReleased
 
     /**
@@ -312,18 +318,17 @@ public class NewForgotPasswordPage extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnClear;
-    private javax.swing.JButton btnExit;
+    private javax.swing.JLabel Answer;
+    private javax.swing.JLabel Email;
+    private javax.swing.JLabel Password;
+    private javax.swing.JLabel Security;
     private javax.swing.JButton btnLogin;
     private javax.swing.JButton btnSearch;
     private javax.swing.JButton btnSignup;
     private javax.swing.JButton btnUpdate;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel7;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField txtAnswer;
     private javax.swing.JTextField txtEmail;
     private javax.swing.JPasswordField txtNewPassWord;
