@@ -44,6 +44,7 @@ public class ViewOrManageOrders extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblOrders = new javax.swing.JTable();
         jLabel1 = new javax.swing.JLabel();
@@ -58,12 +59,9 @@ public class ViewOrManageOrders extends javax.swing.JFrame {
         dpFrom = new com.toedter.calendar.JDateChooser();
         jButton3 = new javax.swing.JButton();
         btnDetails = new javax.swing.JButton();
-        jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMaximumSize(new java.awt.Dimension(1366, 768));
         setMinimumSize(new java.awt.Dimension(1366, 768));
-        setPreferredSize(new java.awt.Dimension(1366, 768));
         addComponentListener(new java.awt.event.ComponentAdapter() {
             public void componentShown(java.awt.event.ComponentEvent evt) {
                 formComponentShown(evt);
@@ -71,6 +69,10 @@ public class ViewOrManageOrders extends javax.swing.JFrame {
         });
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jPanel1.setBackground(new java.awt.Color(153, 153, 153));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        tblOrders.setBackground(new java.awt.Color(250, 242, 228));
         tblOrders.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         tblOrders.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -100,63 +102,63 @@ public class ViewOrManageOrders extends javax.swing.JFrame {
             tblOrders.getColumnModel().getColumn(0).setMaxWidth(100);
         }
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(126, 94, 1100, 390));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(126, 94, 1100, 390));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setForeground(new java.awt.Color(240, 212, 167));
         jLabel1.setText("To");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 40, -1, -1));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 40, -1, -1));
 
         lblStatus.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        lblStatus.setForeground(new java.awt.Color(255, 255, 255));
+        lblStatus.setForeground(new java.awt.Color(240, 212, 167));
         lblStatus.setText("Change status");
-        getContentPane().add(lblStatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 600, -1, -1));
+        jPanel1.add(lblStatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 600, -1, -1));
 
         cbxShipper.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        getContentPane().add(cbxShipper, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 560, 182, -1));
+        jPanel1.add(cbxShipper, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 560, 182, -1));
 
         cbxStatus.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        getContentPane().add(cbxStatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 600, 182, -1));
+        jPanel1.add(cbxStatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 600, 182, -1));
 
         btnUpdate.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        btnUpdate.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/save.png"))); // NOI18N
+        btnUpdate.setForeground(new java.awt.Color(225, 169, 80));
         btnUpdate.setText("Update");
+        btnUpdate.setBorderPainted(false);
         btnUpdate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnUpdateActionPerformed(evt);
             }
         });
-        getContentPane().add(btnUpdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 640, 144, 40));
+        jPanel1.add(btnUpdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 640, 144, 40));
 
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/manage-order.png"))); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(240, 212, 167));
         jLabel3.setText("Manage Order");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
 
         dpTo.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
             public void propertyChange(java.beans.PropertyChangeEvent evt) {
                 dpToPropertyChange(evt);
             }
         });
-        getContentPane().add(dpTo, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 40, 200, -1));
+        jPanel1.add(dpTo, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 40, 200, -1));
 
         lblShipper.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        lblShipper.setForeground(new java.awt.Color(255, 255, 255));
+        lblShipper.setForeground(new java.awt.Color(240, 212, 167));
         lblShipper.setText("Set shipper");
-        getContentPane().add(lblShipper, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 560, -1, -1));
+        jPanel1.add(lblShipper, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 560, -1, -1));
 
         jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setForeground(new java.awt.Color(240, 212, 167));
         jLabel6.setText("From");
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 40, -1, -1));
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 40, -1, -1));
 
         dpFrom.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
             public void propertyChange(java.beans.PropertyChangeEvent evt) {
                 dpFromPropertyChange(evt);
             }
         });
-        getContentPane().add(dpFrom, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 40, 200, -1));
+        jPanel1.add(dpFrom, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 40, 200, -1));
 
         jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/close.png"))); // NOI18N
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -164,20 +166,20 @@ public class ViewOrManageOrders extends javax.swing.JFrame {
                 jButton3ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1310, 10, -1, -1));
+        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1310, 10, -1, -1));
 
         btnDetails.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        btnDetails.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/View Bills _ Order Placed Details.png"))); // NOI18N
+        btnDetails.setForeground(new java.awt.Color(225, 169, 80));
         btnDetails.setText("View Details");
+        btnDetails.setBorderPainted(false);
         btnDetails.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnDetailsActionPerformed(evt);
             }
         });
-        getContentPane().add(btnDetails, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 500, 144, 40));
+        jPanel1.add(btnDetails, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 500, 144, 40));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/full-page-background.PNG"))); // NOI18N
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(-2, -52, 1420, 870));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1370, 770));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -350,8 +352,8 @@ public class ViewOrManageOrders extends javax.swing.JFrame {
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lblShipper;
     private javax.swing.JLabel lblStatus;

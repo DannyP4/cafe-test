@@ -53,6 +53,7 @@ public class ViewOrderDetails extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
         lblOrderedBy = new javax.swing.JLabel();
         lblEmail = new javax.swing.JLabel();
         lblTime = new javax.swing.JLabel();
@@ -76,12 +77,9 @@ public class ViewOrderDetails extends javax.swing.JFrame {
         btnInvoice = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
-        jLabel19 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMaximumSize(new java.awt.Dimension(1366, 768));
         setMinimumSize(new java.awt.Dimension(1366, 768));
-        setPreferredSize(new java.awt.Dimension(1366, 768));
         addComponentListener(new java.awt.event.ComponentAdapter() {
             public void componentShown(java.awt.event.ComponentEvent evt) {
                 formComponentShown(evt);
@@ -89,56 +87,60 @@ public class ViewOrderDetails extends javax.swing.JFrame {
         });
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jPanel1.setBackground(new java.awt.Color(153, 153, 153));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
         lblOrderedBy.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        lblOrderedBy.setForeground(new java.awt.Color(255, 255, 255));
+        lblOrderedBy.setForeground(new java.awt.Color(240, 212, 167));
         lblOrderedBy.setText("Ordered by: ");
-        getContentPane().add(lblOrderedBy, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 50, 272, 20));
+        jPanel1.add(lblOrderedBy, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 50, 272, 20));
 
         lblEmail.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        lblEmail.setForeground(new java.awt.Color(255, 255, 255));
+        lblEmail.setForeground(new java.awt.Color(240, 212, 167));
         lblEmail.setText("Email: ");
-        getContentPane().add(lblEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 90, -1, -1));
+        jPanel1.add(lblEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 90, -1, -1));
 
         lblTime.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        lblTime.setForeground(new java.awt.Color(255, 255, 255));
+        lblTime.setForeground(new java.awt.Color(240, 212, 167));
         lblTime.setText("Time: ");
-        getContentPane().add(lblTime, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 130, 272, -1));
+        jPanel1.add(lblTime, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 130, 272, -1));
 
         lblRecipient.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        lblRecipient.setForeground(new java.awt.Color(255, 255, 255));
+        lblRecipient.setForeground(new java.awt.Color(240, 212, 167));
         lblRecipient.setText("Recipient: ");
-        getContentPane().add(lblRecipient, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 50, 272, -1));
+        jPanel1.add(lblRecipient, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 50, 272, -1));
 
         lblRecipientPhone.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        lblRecipientPhone.setForeground(new java.awt.Color(255, 255, 255));
+        lblRecipientPhone.setForeground(new java.awt.Color(240, 212, 167));
         lblRecipientPhone.setText("Phone number: ");
-        getContentPane().add(lblRecipientPhone, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 90, 272, -1));
+        jPanel1.add(lblRecipientPhone, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 90, 272, -1));
 
         lblAddress.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        lblAddress.setForeground(new java.awt.Color(255, 255, 255));
+        lblAddress.setForeground(new java.awt.Color(240, 212, 167));
         lblAddress.setText("Address: ");
-        getContentPane().add(lblAddress, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 130, 272, -1));
+        jPanel1.add(lblAddress, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 130, 272, -1));
 
         lblStatus.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        lblStatus.setForeground(new java.awt.Color(255, 255, 255));
+        lblStatus.setForeground(new java.awt.Color(240, 212, 167));
         lblStatus.setText("Status: ");
-        getContentPane().add(lblStatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 53, 272, -1));
+        jPanel1.add(lblStatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 53, 272, -1));
 
         lblShipper.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        lblShipper.setForeground(new java.awt.Color(255, 255, 255));
+        lblShipper.setForeground(new java.awt.Color(240, 212, 167));
         lblShipper.setText("Shipper: ");
-        getContentPane().add(lblShipper, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 90, 272, -1));
+        jPanel1.add(lblShipper, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 90, 272, -1));
 
         lblShipperPhone.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        lblShipperPhone.setForeground(new java.awt.Color(255, 255, 255));
+        lblShipperPhone.setForeground(new java.awt.Color(240, 212, 167));
         lblShipperPhone.setText("Phone number: ");
-        getContentPane().add(lblShipperPhone, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 130, 272, -1));
+        jPanel1.add(lblShipperPhone, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 130, 272, -1));
 
         jLabel10.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
-        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel10.setForeground(new java.awt.Color(240, 212, 167));
         jLabel10.setText("Items");
-        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 190, -1, -1));
+        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 190, -1, -1));
 
+        tblItems.setBackground(new java.awt.Color(250, 242, 228));
         tblItems.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -153,57 +155,58 @@ public class ViewOrderDetails extends javax.swing.JFrame {
             tblItems.getColumnModel().getColumn(0).setMaxWidth(100);
         }
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 260, 783, 240));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 260, 783, 240));
 
         jLabel11.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
-        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel11.setForeground(new java.awt.Color(240, 212, 167));
         jLabel11.setText("Total Cost:");
-        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 520, -1, -1));
+        jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 520, -1, -1));
 
         jLabel12.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
-        jLabel12.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel12.setForeground(new java.awt.Color(240, 212, 167));
         jLabel12.setText("Ship Cost: ");
-        getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 560, 81, -1));
+        jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 560, 81, -1));
 
         jLabel13.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
-        jLabel13.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel13.setForeground(new java.awt.Color(240, 212, 167));
         jLabel13.setText("Discount: ");
-        getContentPane().add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 600, 81, -1));
+        jPanel1.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 600, 81, -1));
 
         jLabel14.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
-        jLabel14.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel14.setForeground(new java.awt.Color(240, 212, 167));
         jLabel14.setText("Final Cost:");
-        getContentPane().add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 640, 81, -1));
+        jPanel1.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 640, 81, -1));
 
         lblTotalCost.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
-        lblTotalCost.setForeground(new java.awt.Color(255, 255, 255));
+        lblTotalCost.setForeground(new java.awt.Color(240, 212, 167));
         lblTotalCost.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        getContentPane().add(lblTotalCost, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 520, 120, 20));
+        jPanel1.add(lblTotalCost, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 520, 120, 20));
 
         lblShipCost.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
-        lblShipCost.setForeground(new java.awt.Color(255, 255, 255));
+        lblShipCost.setForeground(new java.awt.Color(240, 212, 167));
         lblShipCost.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        getContentPane().add(lblShipCost, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 560, 120, 20));
+        jPanel1.add(lblShipCost, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 560, 120, 20));
 
         lblDiscount.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
-        lblDiscount.setForeground(new java.awt.Color(255, 255, 255));
+        lblDiscount.setForeground(new java.awt.Color(240, 212, 167));
         lblDiscount.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        //getContentPane().add(lblDiscount, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 600, 120, 20));
+        jPanel1.add(lblDiscount, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 600, 120, 20));
 
         lblFinalCost.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
-        lblFinalCost.setForeground(new java.awt.Color(255, 255, 255));
+        lblFinalCost.setForeground(new java.awt.Color(240, 212, 167));
         lblFinalCost.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        getContentPane().add(lblFinalCost, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 640, 120, 20));
+        jPanel1.add(lblFinalCost, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 640, 120, 20));
 
         btnInvoice.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        btnInvoice.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/generate bill _ print.png"))); // NOI18N
+        btnInvoice.setForeground(new java.awt.Color(225, 169, 80));
         btnInvoice.setText("Export Invoice");
+        btnInvoice.setBorderPainted(false);
         btnInvoice.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnInvoiceActionPerformed(evt);
             }
         });
-        getContentPane().add(btnInvoice, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 680, -1, 41));
+        jPanel1.add(btnInvoice, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 680, -1, 41));
 
         jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/close.png"))); // NOI18N
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -211,16 +214,14 @@ public class ViewOrderDetails extends javax.swing.JFrame {
                 jButton3ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1310, 10, -1, -1));
+        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1310, 10, -1, -1));
 
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/order.png"))); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(240, 212, 167));
         jLabel3.setText("Order Details");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
 
-        jLabel19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/full-page-background.PNG"))); // NOI18N
-        getContentPane().add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(-5, -22, 1450, 810));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1370, 770));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -413,8 +414,8 @@ public class ViewOrderDetails extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lblAddress;
     private javax.swing.JLabel lblDiscount;
