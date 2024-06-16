@@ -146,6 +146,39 @@ public class UserDao {
         return user;
     }
 
+    public void lockUserByEmail(String email) {
+        if (!email.equalsIgnoreCase("admin@gmail.com") && !email.equalsIgnoreCase("duy@gmail.com") && !email.equalsIgnoreCase("huy@gmail.com")) {
+            try {
+                String query = "UPDATE [User] SET IsApproved = 0 WHERE Email = ?";
+                Object[] args = {email};
+                DbOperations.updateData(query, args,"");
+            } catch (Exception e) {
+                JOptionPane.showMessageDialog(null, e);
+            }
+        }
+    }
+
+    public boolean checkUserIfBanned(String email) {
+        if (email.equalsIgnoreCase("admin@gmail.com") || email.equalsIgnoreCase("duy@gmail.com") || email.equalsIgnoreCase("huy@gmail.com"))
+            return false;
+
+        try {
+            String query = "SELECT IsApproved FROM [User] WHERE Email = ?";
+            Object[] args = {email};
+
+            ResultSet rs = DbOperations.getData(query, args);
+            if (rs.next()) {
+                boolean isApproved = rs.getBoolean("IsApproved");
+                return !isApproved; // Trả về true nếu bị banned (IsApproved = 0), ngược lại false
+            }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, e, "Error", JOptionPane.ERROR_MESSAGE);
+        }
+
+        return false;
+    }
+
+
     public static User getSecurityQuestion(String email) {
         User user = null;
         try {
