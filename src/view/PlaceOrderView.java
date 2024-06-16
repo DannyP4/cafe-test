@@ -80,7 +80,7 @@ public class PlaceOrderView extends javax.swing.JFrame {
         jScrollPane5 = new javax.swing.JScrollPane();
         tblPayment = new javax.swing.JTable();
         btnDeselect = new javax.swing.JButton();
-        jLabel15 = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(1366, 768));
@@ -94,13 +94,12 @@ public class PlaceOrderView extends javax.swing.JFrame {
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/place order.png"))); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(240,212,167));
         jLabel1.setText("Place Order");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 245, -1));
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setForeground(new java.awt.Color(240,212,167));
         jLabel2.setText("Item List");
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 50, 120, -1));
 
@@ -118,12 +117,12 @@ public class PlaceOrderView extends javax.swing.JFrame {
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 90, 600, 340));
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setForeground(new java.awt.Color(240,212,167));
         jLabel3.setText("Total: ");
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 460, 88, -1));
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setForeground(new java.awt.Color(240,212,167));
         jLabel4.setText("Ship cost: ");
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 500, -1, -1));
 
@@ -137,25 +136,27 @@ public class PlaceOrderView extends javax.swing.JFrame {
         getContentPane().add(jSeparator, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 540, 170, -1));
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setForeground(new java.awt.Color(240,212,167));
         jLabel6.setText("Final cost:");
         getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 560, 88, -1));
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel7.setForeground(new java.awt.Color(240,212,167));
         jLabel7.setText("Delivery Info:");
         getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(762, 70, -1, -1));
 
         btnRemoveDeliveryInfo.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnRemoveDeliveryInfo.setForeground(new java.awt.Color(225,169,80));
         btnRemoveDeliveryInfo.setText("Remove");
         btnRemoveDeliveryInfo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnRemoveDeliveryInfoActionPerformed(evt);
             }
         });
-        getContentPane().add(btnRemoveDeliveryInfo, new org.netbeans.lib.awtextra.AbsoluteConstraints(1030, 58, -1, -1));
+        getContentPane().add(btnRemoveDeliveryInfo, new org.netbeans.lib.awtextra.AbsoluteConstraints(1040, 58, -1, -1));
 
         btnAddDeliveryInfo.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnAddDeliveryInfo.setForeground(new java.awt.Color(225,169,80));
         btnAddDeliveryInfo.setText("Add");
         btnAddDeliveryInfo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -196,13 +197,13 @@ public class PlaceOrderView extends javax.swing.JFrame {
         getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 90, 480, 90));
 
         jLabel8.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel8.setForeground(new java.awt.Color(240,212,167));
         jLabel8.setText("Payment Method: ");
         getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 250, -1, -1));
 
         buttonGroup1.add(rbtnCredit);
         rbtnCredit.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        rbtnCredit.setForeground(new java.awt.Color(255, 255, 255));
+        rbtnCredit.setForeground(new java.awt.Color(240,212,167));
         rbtnCredit.setText("Credit Cash");
         rbtnCredit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -213,7 +214,7 @@ public class PlaceOrderView extends javax.swing.JFrame {
 
         buttonGroup1.add(rbtnCOD);
         rbtnCOD.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        rbtnCOD.setForeground(new java.awt.Color(255, 255, 255));
+        rbtnCOD.setForeground(new java.awt.Color(240,212,167));
         rbtnCOD.setText("Cash on Delivery");
         rbtnCOD.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -225,6 +226,7 @@ public class PlaceOrderView extends javax.swing.JFrame {
 
         btnRemovePaymentInfo.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btnRemovePaymentInfo.setText("Remove");
+        btnRemovePaymentInfo.setForeground(new java.awt.Color(225, 169, 80));
         btnRemovePaymentInfo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnRemovePaymentInfoActionPerformed(evt);
@@ -233,6 +235,7 @@ public class PlaceOrderView extends javax.swing.JFrame {
         getContentPane().add(btnRemovePaymentInfo, new org.netbeans.lib.awtextra.AbsoluteConstraints(1040, 370, -1, -1));
 
         btnAddPaymentInfo.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnAddPaymentInfo.setForeground(new java.awt.Color(225,169,80));
         btnAddPaymentInfo.setText("Add");
         btnAddPaymentInfo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -243,12 +246,12 @@ public class PlaceOrderView extends javax.swing.JFrame {
 
 
         jLabel10.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel10.setForeground(new java.awt.Color(240,212,167));
         jLabel10.setText("Note: ");
         getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(761, 410, -1, -1));
 
         btnPurchase.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        btnPurchase.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/add to cart.png"))); // NOI18N
+        btnPurchase.setForeground(new java.awt.Color(225,169,80));
         btnPurchase.setText("Purchase");
         btnPurchase.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -258,13 +261,13 @@ public class PlaceOrderView extends javax.swing.JFrame {
         getContentPane().add(btnPurchase, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 640, 134, 40));
 
         lblTotal.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        lblTotal.setForeground(new java.awt.Color(255, 255, 255));
+        lblTotal.setForeground(new java.awt.Color(240,212,167));
         lblTotal.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         lblTotal.setText("$0,000");
         getContentPane().add(lblTotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 460, 70, -1));
 
         lblShipCost.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        lblShipCost.setForeground(new java.awt.Color(255, 255, 255));
+        lblShipCost.setForeground(new java.awt.Color(240,212,167));
         lblShipCost.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         lblShipCost.setText("$0,000");
         getContentPane().add(lblShipCost, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 500, 70, -1));
@@ -276,7 +279,7 @@ public class PlaceOrderView extends javax.swing.JFrame {
 //        getContentPane().add(lblDiscount, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 540, 70, -1));
 
         lblFinalCost.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        lblFinalCost.setForeground(new java.awt.Color(255, 255, 255));
+        lblFinalCost.setForeground(new java.awt.Color(240,212,167));
         lblFinalCost.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         lblFinalCost.setText("$0,000");
         getContentPane().add(lblFinalCost, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 560, 70, -1));
@@ -332,11 +335,10 @@ public class PlaceOrderView extends javax.swing.JFrame {
 
         btnDeselect.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
 
-        jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/full-page-background.PNG"))); // NOI18N
-        jLabel15.setMaximumSize(new java.awt.Dimension(1366, 768));
-        jLabel15.setMinimumSize(new java.awt.Dimension(1366, 768));
-        jLabel15.setPreferredSize(new java.awt.Dimension(1366, 768));
-        getContentPane().add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -110, -1, 980));
+        jPanel2.setBackground(new java.awt.Color(153, 153, 153));
+        jPanel2.setForeground(new java.awt.Color(240, 212, 167));
+        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1370, 770));
+
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -565,7 +567,7 @@ public class PlaceOrderView extends javax.swing.JFrame {
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel15;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
