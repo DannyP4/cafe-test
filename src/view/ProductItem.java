@@ -50,23 +50,25 @@ public class ProductItem extends javax.swing.JPanel {
         jSpinner1 = new javax.swing.JSpinner();
         lblCategory = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(204, 255, 204));
+        setBackground(new java.awt.Color(250, 242, 228));
         setMaximumSize(new java.awt.Dimension(212, 186));
         setMinimumSize(new java.awt.Dimension(212, 186));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lblProduct.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        lblProduct.setForeground(new java.awt.Color(153, 153, 153));
         lblProduct.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblProduct.setText("Name");
         add(lblProduct, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 250, 20));
 
         lblPrice.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lblPrice.setForeground(new java.awt.Color(153, 153, 153));
         lblPrice.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblPrice.setText("$ 0.00");
         add(lblPrice, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 250, -1));
 
         btnAddToCart.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btnAddToCart.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/add to cart.png"))); // NOI18N
+        btnAddToCart.setForeground(new java.awt.Color(225, 169, 80));
         btnAddToCart.setText("Add to cart");
         btnAddToCart.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -84,6 +86,7 @@ public class ProductItem extends javax.swing.JPanel {
         add(jSpinner1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 110, 90, -1));
 
         lblCategory.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lblCategory.setForeground(new java.awt.Color(153, 153, 153));
         lblCategory.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblCategory.setText("Category");
         add(lblCategory, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 250, 31));
