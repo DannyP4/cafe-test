@@ -143,7 +143,7 @@ public class Home extends javax.swing.JFrame {
 
         btnViewEditDeleteProduct.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btnViewEditDeleteProduct.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/view edit delete product.png"))); // NOI18N
-        btnViewEditDeleteProduct.setText("View,Edit & Delete Product");
+        btnViewEditDeleteProduct.setText("View, Edit & Delete Product");
         btnViewEditDeleteProduct.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnViewEditDeleteProductActionPerformed(evt);

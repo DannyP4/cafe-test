@@ -39,7 +39,7 @@ public class VerifyUsers extends javax.swing.JFrame {
             u.getSex(),
             u.getBirthDate().toString(),
             u.getPhoneNumber(),
-            u.isApproved() ? "Approved" : "Not approved"}));
+            u.isApproved() ? "Normal" : "Banned"}));
     }
 
     /**
@@ -150,7 +150,7 @@ public class VerifyUsers extends javax.swing.JFrame {
         String email = model.getValueAt(index, 2).toString();
         String status = model.getValueAt(index, 6).toString();
         boolean approved;
-        if (status.equals("Approved")) {
+        if (status.equals("Normal")) {
             approved = false;
         } else {
             approved = true;
