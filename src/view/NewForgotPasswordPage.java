@@ -115,7 +115,7 @@ public class NewForgotPasswordPage extends javax.swing.JFrame {
         jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 20, -1, -1));
 
         btnUpdate.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btnUpdate.setForeground(new java.awt.Color(247, 231, 206));
+        btnUpdate.setForeground(new java.awt.Color(240, 212, 167));
         btnUpdate.setText("Update");
         btnUpdate.setBorderPainted(false);
         btnUpdate.setContentAreaFilled(false);
@@ -127,7 +127,7 @@ public class NewForgotPasswordPage extends javax.swing.JFrame {
         jPanel1.add(btnUpdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 490, -1, -1));
 
         btnLogin.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btnLogin.setForeground(new java.awt.Color(247, 231, 206));
+        btnLogin.setForeground(new java.awt.Color(240, 212, 167));
         btnLogin.setText("Login");
         btnLogin.setBorderPainted(false);
         btnLogin.setContentAreaFilled(false);
@@ -139,7 +139,7 @@ public class NewForgotPasswordPage extends javax.swing.JFrame {
         jPanel1.add(btnLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 490, 90, -1));
 
         btnSignup.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btnSignup.setForeground(new java.awt.Color(247, 231, 206));
+        btnSignup.setForeground(new java.awt.Color(240, 212, 167));
         btnSignup.setText("Sign up");
         btnSignup.setBorderPainted(false);
         btnSignup.setContentAreaFilled(false);
@@ -211,7 +211,7 @@ public class NewForgotPasswordPage extends javax.swing.JFrame {
 
         jLabel1.setBackground(new java.awt.Color(240, 240, 240));
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(247, 231, 206));
+        jLabel1.setForeground(new java.awt.Color(240, 212, 167));
         jLabel1.setText("Forgot Password?");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 230, -1, 69));
 

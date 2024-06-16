@@ -94,7 +94,7 @@ public class ChangePassword extends javax.swing.JFrame {
         jPanel1.add(Old, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 130, -1, 30));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(247, 231, 206));
+        jLabel1.setForeground(new java.awt.Color(240, 212, 167));
         jLabel1.setText("Change Password");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 80, -1, -1));
 
@@ -136,7 +136,7 @@ public class ChangePassword extends javax.swing.JFrame {
         jPanel1.add(txtConfirmPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 230, 250, 30));
 
         btnUpdate.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btnUpdate.setForeground(new java.awt.Color(247, 231, 206));
+        btnUpdate.setForeground(new java.awt.Color(240, 212, 167));
         btnUpdate.setText("Update");
         btnUpdate.setBorderPainted(false);
         btnUpdate.setContentAreaFilled(false);

@@ -86,7 +86,7 @@ public class SignUp extends javax.swing.JFrame {
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 40)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(247, 231, 206));
+        jLabel1.setForeground(new java.awt.Color(240, 212, 167));
         jLabel1.setText("Sign up");
         jLabel1.setToolTipText("signup");
         jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 160, -1, -1));
@@ -238,7 +238,7 @@ public class SignUp extends javax.swing.JFrame {
         jPanel2.add(txtAnswer, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 540, 400, 30));
 
         btnSave.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btnSave.setForeground(new java.awt.Color(247, 231, 206));
+        btnSave.setForeground(new java.awt.Color(240, 212, 167));
         btnSave.setText("Save ");
         btnSave.setBorderPainted(false);
         btnSave.setContentAreaFilled(false);
@@ -250,7 +250,7 @@ public class SignUp extends javax.swing.JFrame {
         jPanel2.add(btnSave, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 580, -1, -1));
 
         btnForgot.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btnForgot.setForeground(new java.awt.Color(247, 231, 206));
+        btnForgot.setForeground(new java.awt.Color(240, 212, 167));
         btnForgot.setText("Forgot password?");
         btnForgot.setBorderPainted(false);
         btnForgot.setContentAreaFilled(false);
@@ -263,7 +263,7 @@ public class SignUp extends javax.swing.JFrame {
 
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 0, 700, 770));
 
-        jPanel1.setBackground(new java.awt.Color(247, 231, 206));
+        jPanel1.setBackground(new java.awt.Color(240, 212, 167));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btnLogin.setBackground(new java.awt.Color(247, 231, 206));

@@ -104,7 +104,7 @@ public class Login extends javax.swing.JFrame {
 
         jLabel6.setBackground(new java.awt.Color(240, 240, 240));
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(247, 231, 206));
+        jLabel6.setForeground(new java.awt.Color(240, 212, 167));
         jLabel6.setText("Login");
         getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(970, 260, 115, -1));
 
@@ -147,6 +147,7 @@ public class Login extends javax.swing.JFrame {
         btnSignup.setForeground(new java.awt.Color(255, 255, 255));
         btnSignup.setText("Signup");
         btnSignup.setBorderPainted(false);
+        btnSignup.setContentAreaFilled(false);
         btnSignup.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSignupActionPerformed(evt);
@@ -157,7 +158,7 @@ public class Login extends javax.swing.JFrame {
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
 
         btnForgot.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btnForgot.setForeground(new java.awt.Color(247, 231, 206));
+        btnForgot.setForeground(new java.awt.Color(240, 212, 167));
         btnForgot.setText("Forgot password?");
         btnForgot.setBorderPainted(false);
         btnForgot.setContentAreaFilled(false);
@@ -168,7 +169,7 @@ public class Login extends javax.swing.JFrame {
         });
 
         btnLogin.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btnLogin.setForeground(new java.awt.Color(247, 231, 206));
+        btnLogin.setForeground(new java.awt.Color(240, 212, 167));
         btnLogin.setText("Login");
         btnLogin.setBorderPainted(false);
         btnLogin.setContentAreaFilled(false);
@@ -201,7 +202,7 @@ public class Login extends javax.swing.JFrame {
 
         getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 0, 700, 770));
 
-        jPanel2.setBackground(new java.awt.Color(247, 231, 206));
+        jPanel2.setBackground(new java.awt.Color(240, 212, 167));
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
