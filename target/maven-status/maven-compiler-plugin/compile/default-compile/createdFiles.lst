@@ -13,7 +13,6 @@ view\AddOrEditStaff$6.class
 model\User.class
 view\SignUp$13.class
 view\Menu.class
-view\NewForgotPasswordPage$11.class
 view\ChangePassword$5.class
 view\ViewOrManageOrders$10.class
 view\ViewEditDeleteProduct$1.class
@@ -90,7 +89,6 @@ view\Menu$11.class
 view\ViewOrManageOrders$11.class
 view\Login$4.class
 view\AddPaymentInfo$4.class
-view\ChangePassword$7.class
 view\ViewOrderDetails$2.class
 view\PlaceOrderView$6.class
 view\AddOrEditStaff.class
@@ -178,7 +176,6 @@ view\ChangePassword$3.class
 view\ChangePassword.class
 view\SignUp$5.class
 view\AddPaymentInfo$8.class
-view\NewForgotPasswordPage$10.class
 view\ManageStaff$3.class
 view\AddOrEditStaff$2.class
 view\PlaceOrderView$11.class

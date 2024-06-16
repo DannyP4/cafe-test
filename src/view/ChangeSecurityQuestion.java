@@ -39,6 +39,21 @@ public class ChangeSecurityQuestion extends javax.swing.JFrame {
         } else {
             btnUpdate.setEnabled(false);
         }
+        if (password.equals("")) {
+            Password.setVisible(true);
+        } else {
+            Password.setVisible(false);
+        }
+        if (securityQuestion.equals("")) {
+            Nsecurity.setVisible(true);
+        } else {
+            Nsecurity.setVisible(false);
+        }
+        if (answer.equals("")) {
+            Nanswer.setVisible(true);
+        } else {
+            Nanswer.setVisible(false);
+        }
     }
 
     /**
@@ -50,19 +65,18 @@ public class ChangeSecurityQuestion extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
+        Nsecurity = new javax.swing.JLabel();
         txtOldSQ = new javax.swing.JTextField();
         txtNewSQ = new javax.swing.JTextField();
-        jLabel4 = new javax.swing.JLabel();
+        Nanswer = new javax.swing.JLabel();
         txtNewAns = new javax.swing.JTextField();
-        jLabel5 = new javax.swing.JLabel();
+        Password = new javax.swing.JLabel();
         txtPassword = new javax.swing.JPasswordField();
         btnUpdate = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
-        jLabel6 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocation(new java.awt.Point(350, 134));
@@ -74,91 +88,98 @@ public class ChangeSecurityQuestion extends javax.swing.JFrame {
         });
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/change Security Question.png"))); // NOI18N
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(240, 212, 167));
         jLabel1.setText("Change Security Question");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, -1, -1));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 60, -1, -1));
 
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/close.png"))); // NOI18N
+        jButton1.setContentAreaFilled(false);
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(668, 6, -1, -1));
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 20, -1, -1));
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("Old Security Question");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 80, -1, 30));
+        Nsecurity.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        Nsecurity.setForeground(new java.awt.Color(153, 153, 153));
+        Nsecurity.setText("New Security Question");
+        jPanel1.add(Nsecurity, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 180, -1, 30));
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setText("New Security Question");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 130, -1, -1));
-
+        txtOldSQ.setBackground(new java.awt.Color(250, 242, 228));
         txtOldSQ.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 txtOldSQKeyReleased(evt);
             }
         });
-        getContentPane().add(txtOldSQ, new org.netbeans.lib.awtextra.AbsoluteConstraints(283, 83, 286, -1));
+        jPanel1.add(txtOldSQ, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 140, 286, 30));
 
+        txtNewSQ.setBackground(new java.awt.Color(250, 242, 228));
         txtNewSQ.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 txtNewSQKeyReleased(evt);
             }
         });
-        getContentPane().add(txtNewSQ, new org.netbeans.lib.awtextra.AbsoluteConstraints(283, 126, 286, -1));
+        jPanel1.add(txtNewSQ, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 180, 286, 30));
 
-        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setText("New Answer");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 170, -1, -1));
+        Nanswer.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        Nanswer.setForeground(new java.awt.Color(153, 153, 153));
+        Nanswer.setText("New Answer");
+        jPanel1.add(Nanswer, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 220, -1, 30));
 
+        txtNewAns.setBackground(new java.awt.Color(250, 242, 228));
         txtNewAns.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 txtNewAnsKeyReleased(evt);
             }
         });
-        getContentPane().add(txtNewAns, new org.netbeans.lib.awtextra.AbsoluteConstraints(283, 166, 286, -1));
+        jPanel1.add(txtNewAns, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 220, 286, 30));
 
-        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel5.setText("Password");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 210, -1, -1));
+        Password.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        Password.setForeground(new java.awt.Color(153, 153, 153));
+        Password.setText("Password");
+        jPanel1.add(Password, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 260, -1, 30));
 
+        txtPassword.setBackground(new java.awt.Color(250, 242, 228));
         txtPassword.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 txtPasswordKeyReleased(evt);
             }
         });
-        getContentPane().add(txtPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(283, 206, 286, -1));
+        jPanel1.add(txtPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 260, 286, 30));
 
         btnUpdate.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btnUpdate.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/save.png"))); // NOI18N
+        btnUpdate.setForeground(new java.awt.Color(240, 212, 167));
         btnUpdate.setText("Update");
+        btnUpdate.setBorderPainted(false);
+        btnUpdate.setContentAreaFilled(false);
+        btnUpdate.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnUpdate.setEnabled(false);
         btnUpdate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnUpdateActionPerformed(evt);
             }
         });
-        getContentPane().add(btnUpdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 250, -1, -1));
+        jPanel1.add(btnUpdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 310, -1, -1));
 
         jButton3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/clear.png"))); // NOI18N
+        jButton3.setForeground(new java.awt.Color(240, 212, 167));
         jButton3.setText("Clear");
+        jButton3.setBorderPainted(false);
+        jButton3.setContentAreaFilled(false);
+        jButton3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 250, -1, -1));
+        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 310, -1, -1));
 
-        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/small-page-background.png"))); // NOI18N
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 400));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -238,15 +259,14 @@ public class ChangeSecurityQuestion extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Nanswer;
+    private javax.swing.JLabel Nsecurity;
+    private javax.swing.JLabel Password;
     private javax.swing.JButton btnUpdate;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField txtNewAns;
     private javax.swing.JTextField txtNewSQ;
     private javax.swing.JTextField txtOldSQ;
