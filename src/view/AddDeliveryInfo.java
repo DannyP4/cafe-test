@@ -56,7 +56,7 @@ public class AddDeliveryInfo extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setBackground(new java.awt.Color(153, 153, 153));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         Name.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
@@ -118,7 +118,6 @@ public class AddDeliveryInfo extends javax.swing.JFrame {
         btnSave.setForeground(new java.awt.Color(240, 212, 167));
         btnSave.setText("Save");
         btnSave.setBorderPainted(false);
-        btnSave.setContentAreaFilled(false);
         btnSave.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnSave.setEnabled(false);
         btnSave.addActionListener(new java.awt.event.ActionListener() {
@@ -128,12 +127,10 @@ public class AddDeliveryInfo extends javax.swing.JFrame {
         });
         jPanel1.add(btnSave, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 270, -1, -1));
 
-        btnClear.setBackground(new java.awt.Color(240, 212, 167));
         btnClear.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btnClear.setForeground(new java.awt.Color(240, 212, 167));
         btnClear.setText("Clear");
         btnClear.setBorderPainted(false);
-        btnClear.setContentAreaFilled(false);
         btnClear.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnClear.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

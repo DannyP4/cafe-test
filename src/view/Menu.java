@@ -75,7 +75,7 @@ public class Menu extends javax.swing.JFrame {
         btnPlaceOrder = new javax.swing.JButton();
         btnClearCart = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
-        jLabel10 = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(1366, 768));
@@ -86,16 +86,18 @@ public class Menu extends javax.swing.JFrame {
         });
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        productList.setBackground(new java.awt.Color(250, 242, 228));
         productList.setLayout(new java.awt.GridLayout(0, 3, 10, 10));
         jScrollPane1.setViewportView(productList);
 
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 206, 798, 460));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 204));
+        jLabel1.setForeground(new java.awt.Color(240, 212, 167));
         jLabel1.setText("MENU");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 20, -1, -1));
 
+        txtSearch.setBackground(new java.awt.Color(250, 242, 228));
         txtSearch.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txtSearch.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
@@ -105,8 +107,7 @@ public class Menu extends javax.swing.JFrame {
         getContentPane().add(txtSearch, new org.netbeans.lib.awtextra.AbsoluteConstraints(366, 114, 207, -1));
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/search.png"))); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(240, 212, 167));
         jLabel2.setText("Search:");
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 110, 80, 30));
 
@@ -119,13 +120,12 @@ public class Menu extends javax.swing.JFrame {
         getContentPane().add(cbxCategory, new org.netbeans.lib.awtextra.AbsoluteConstraints(366, 73, 207, -1));
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/category.png"))); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(240, 212, 167));
         jLabel3.setText("Category:");
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 70, -1, -1));
 
         chbxSortByPrice.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        chbxSortByPrice.setForeground(new java.awt.Color(255, 255, 255));
+        chbxSortByPrice.setForeground(new java.awt.Color(240, 212, 167));
         chbxSortByPrice.setText("Sort by price");
         chbxSortByPrice.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
@@ -141,7 +141,7 @@ public class Menu extends javax.swing.JFrame {
 
         buttonGroup1.add(jRadioButton1);
         jRadioButton1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jRadioButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jRadioButton1.setForeground(new java.awt.Color(240, 212, 167));
         jRadioButton1.setText("ASC");
         jRadioButton1.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
@@ -152,7 +152,7 @@ public class Menu extends javax.swing.JFrame {
 
         buttonGroup1.add(jRadioButton2);
         jRadioButton2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jRadioButton2.setForeground(new java.awt.Color(255, 255, 255));
+        jRadioButton2.setForeground(new java.awt.Color(240, 212, 167));
         jRadioButton2.setText("DESC");
         jRadioButton2.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
@@ -161,6 +161,7 @@ public class Menu extends javax.swing.JFrame {
         });
         getContentPane().add(jRadioButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(566, 154, -1, -1));
 
+        tblCart.setBackground(new java.awt.Color(250, 242, 228));
         tblCart.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         tblCart.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -188,7 +189,7 @@ public class Menu extends javax.swing.JFrame {
         getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(902, 73, 420, 260));
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(255, 255, 204));
+        jLabel4.setForeground(new java.awt.Color(240, 212, 167));
         jLabel4.setText("CART");
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1080, 20, -1, -1));
 
@@ -201,36 +202,41 @@ public class Menu extends javax.swing.JFrame {
         getContentPane().add(spnQuantity, new org.netbeans.lib.awtextra.AbsoluteConstraints(1050, 470, 231, -1));
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setForeground(new java.awt.Color(240, 212, 167));
         jLabel5.setText("Product Name");
         getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 390, -1, 30));
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setForeground(new java.awt.Color(240, 212, 167));
         jLabel6.setText("Unit price");
         getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 430, 103, 30));
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel7.setForeground(new java.awt.Color(240, 212, 167));
         jLabel7.setText("Quantity: ");
         getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 470, 103, 30));
 
         jLabel8.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel8.setForeground(new java.awt.Color(240, 212, 167));
         jLabel8.setText("Total: ");
         getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 510, 103, 30));
 
+        txtProductName.setBackground(new java.awt.Color(250, 242, 228));
         txtProductName.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         getContentPane().add(txtProductName, new org.netbeans.lib.awtextra.AbsoluteConstraints(1050, 390, 231, -1));
 
+        txtUnitPrice.setBackground(new java.awt.Color(250, 242, 228));
         txtUnitPrice.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        txtUnitPrice.setForeground(new java.awt.Color(250, 242, 228));
         getContentPane().add(txtUnitPrice, new org.netbeans.lib.awtextra.AbsoluteConstraints(1050, 430, 231, 27));
 
+        txtTotal.setBackground(new java.awt.Color(250, 242, 228));
         txtTotal.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        txtTotal.setForeground(new java.awt.Color(250, 242, 228));
         getContentPane().add(txtTotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(1050, 510, 231, -1));
 
         btnUpdate.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        btnUpdate.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/save.png"))); // NOI18N
+        btnUpdate.setForeground(new java.awt.Color(225, 169, 80));
         btnUpdate.setText("Update");
         btnUpdate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -240,7 +246,7 @@ public class Menu extends javax.swing.JFrame {
         getContentPane().add(btnUpdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 560, 170, 40));
 
         btnRemove.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        btnRemove.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/delete.png"))); // NOI18N
+        btnRemove.setForeground(new java.awt.Color(225, 169, 80));
         btnRemove.setText("Remove");
         btnRemove.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -250,18 +256,18 @@ public class Menu extends javax.swing.JFrame {
         getContentPane().add(btnRemove, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 560, 161, 40));
 
         jLabel9.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel9.setForeground(new java.awt.Color(240, 212, 167));
         jLabel9.setText("Total: ");
         getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(1050, 340, 70, 26));
 
         lblTotal.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        lblTotal.setForeground(new java.awt.Color(255, 255, 255));
+        lblTotal.setForeground(new java.awt.Color(240, 212, 167));
         lblTotal.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         lblTotal.setText("$ 0,00");
         getContentPane().add(lblTotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(1100, 340, 96, -1));
 
         btnPlaceOrder.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        btnPlaceOrder.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/place order.png"))); // NOI18N
+        btnPlaceOrder.setForeground(new java.awt.Color(225, 169, 80));
         btnPlaceOrder.setText("Place Order");
         btnPlaceOrder.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -271,7 +277,7 @@ public class Menu extends javax.swing.JFrame {
         getContentPane().add(btnPlaceOrder, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 610, 170, 40));
 
         btnClearCart.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        btnClearCart.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/clear.png"))); // NOI18N
+        btnClearCart.setForeground(new java.awt.Color(225, 169, 80));
         btnClearCart.setText("Clear Cart");
         btnClearCart.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -288,8 +294,8 @@ public class Menu extends javax.swing.JFrame {
         });
         getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1310, 10, -1, -1));
 
-        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/full-page-background.PNG"))); // NOI18N
-        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        jPanel1.setBackground(new java.awt.Color(153, 153, 153));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1370, 770));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -542,7 +548,6 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JCheckBox chbxSortByPrice;
     private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -551,6 +556,7 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JRadioButton jRadioButton2;
     private javax.swing.JScrollPane jScrollPane1;

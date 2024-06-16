@@ -27,6 +27,7 @@ public class ManageStaff extends javax.swing.JFrame {
     private void initComponents() {
 
         buttonGroup1 = new javax.swing.ButtonGroup();
+        jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         rbtnCurrent = new javax.swing.JRadioButton();
         rbtnAll = new javax.swing.JRadioButton();
@@ -35,7 +36,6 @@ public class ManageStaff extends javax.swing.JFrame {
         btnAdd = new javax.swing.JButton();
         btnEdit = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(1366, 768));
@@ -46,33 +46,35 @@ public class ManageStaff extends javax.swing.JFrame {
         });
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jPanel1.setBackground(new java.awt.Color(153, 153, 153));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/staff.jpg"))); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(240, 212, 167));
         jLabel1.setText("Manage Staff");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, -1));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, -1));
 
         buttonGroup1.add(rbtnCurrent);
         rbtnCurrent.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        rbtnCurrent.setForeground(new java.awt.Color(255, 255, 255));
+        rbtnCurrent.setForeground(new java.awt.Color(240, 212, 167));
         rbtnCurrent.setText("Current");
         rbtnCurrent.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 rbtnCurrentActionPerformed(evt);
             }
         });
-        getContentPane().add(rbtnCurrent, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 90, 98, -1));
+        jPanel1.add(rbtnCurrent, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 90, 98, -1));
 
         buttonGroup1.add(rbtnAll);
         rbtnAll.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        rbtnAll.setForeground(new java.awt.Color(255, 255, 255));
+        rbtnAll.setForeground(new java.awt.Color(240, 212, 167));
         rbtnAll.setText("All");
         rbtnAll.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 rbtnAllActionPerformed(evt);
             }
         });
-        getContentPane().add(rbtnAll, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 90, 98, -1));
+        jPanel1.add(rbtnAll, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 90, 98, -1));
 
         tblStaff.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         tblStaff.setModel(new javax.swing.table.DefaultTableModel(
@@ -90,27 +92,31 @@ public class ManageStaff extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(tblStaff);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 143, 1040, 440));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 143, 1040, 440));
 
-        btnAdd.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        btnAdd.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/new product.png"))); // NOI18N
+        btnAdd.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btnAdd.setForeground(new java.awt.Color(225, 169, 80));
         btnAdd.setText("Add");
+        btnAdd.setBorderPainted(false);
+        btnAdd.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnAdd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAddActionPerformed(evt);
             }
         });
-        getContentPane().add(btnAdd, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 610, 101, -1));
+        jPanel1.add(btnAdd, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 610, 101, -1));
 
-        btnEdit.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        btnEdit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/view edit delete product.png"))); // NOI18N
+        btnEdit.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btnEdit.setForeground(new java.awt.Color(225, 169, 80));
         btnEdit.setText("Edit");
+        btnEdit.setBorderPainted(false);
+        btnEdit.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnEdit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnEditActionPerformed(evt);
             }
         });
-        getContentPane().add(btnEdit, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 670, 101, -1));
+        jPanel1.add(btnEdit, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 670, 101, -1));
 
         jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/close.png"))); // NOI18N
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -118,10 +124,9 @@ public class ManageStaff extends javax.swing.JFrame {
                 jButton3ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1310, 10, -1, -1));
+        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1310, 20, -1, -1));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/full-page-background.PNG"))); // NOI18N
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-2, -22, 1440, 810));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1370, 770));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -233,7 +238,7 @@ public class ManageStaff extends javax.swing.JFrame {
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JRadioButton rbtnAll;
     private javax.swing.JRadioButton rbtnCurrent;

@@ -69,7 +69,7 @@ public class AddOrEditStaff extends javax.swing.JFrame {
         });
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setBackground(new java.awt.Color(153, 153, 153));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lblTitle.setBackground(new java.awt.Color(255, 51, 51));
@@ -86,7 +86,7 @@ public class AddOrEditStaff extends javax.swing.JFrame {
         Date.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         Date.setForeground(new java.awt.Color(153, 153, 153));
         Date.setText("Birth Date");
-        jPanel1.add(Date, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 200, 70, 30));
+        jPanel1.add(Date, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 200, 70, 30));
 
         Phone.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         Phone.setForeground(new java.awt.Color(153, 153, 153));
@@ -126,6 +126,7 @@ public class AddOrEditStaff extends javax.swing.JFrame {
         });
         jPanel1.add(txtSalary, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 300, 299, 30));
 
+        txtPhone.setEditable(false);
         txtPhone.setBackground(new java.awt.Color(250, 242, 228));
         txtPhone.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         txtPhone.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -144,17 +145,16 @@ public class AddOrEditStaff extends javax.swing.JFrame {
                 cbxSexActionPerformed(evt);
             }
         });
-        jPanel1.add(cbxSex, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 200, 140, 30));
+        jPanel1.add(cbxSex, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 200, 100, 30));
 
         cbxPosition.setBackground(new java.awt.Color(250, 242, 228));
         cbxPosition.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jPanel1.add(cbxPosition, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 400, 299, 30));
 
         btnAction.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        btnAction.setForeground(new java.awt.Color(240, 212, 167));
+        btnAction.setForeground(new java.awt.Color(225, 169, 80));
         btnAction.setText("Save");
         btnAction.setBorderPainted(false);
-        btnAction.setContentAreaFilled(false);
         btnAction.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnAction.setEnabled(false);
         btnAction.addActionListener(new java.awt.event.ActionListener() {
@@ -180,7 +180,7 @@ public class AddOrEditStaff extends javax.swing.JFrame {
                 dpBirthDatePropertyChange(evt);
             }
         });
-        jPanel1.add(dpBirthDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 200, 140, 30));
+        jPanel1.add(dpBirthDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 200, 180, 30));
 
         dpEnd.setBackground(new java.awt.Color(250, 242, 228));
         dpEnd.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -201,10 +201,9 @@ public class AddOrEditStaff extends javax.swing.JFrame {
         jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 20, -1, -1));
 
         btnAction1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        btnAction1.setForeground(new java.awt.Color(240, 212, 167));
+        btnAction1.setForeground(new java.awt.Color(225, 169, 80));
         btnAction1.setText("Clear");
         btnAction1.setBorderPainted(false);
-        btnAction1.setContentAreaFilled(false);
         btnAction1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnAction1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
