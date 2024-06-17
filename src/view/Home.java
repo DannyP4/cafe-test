@@ -153,7 +153,7 @@ public class Home extends javax.swing.JFrame {
 
         btnVerifyUsers.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btnVerifyUsers.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/verify users.png"))); // NOI18N
-        btnVerifyUsers.setText("Verify Users");
+        btnVerifyUsers.setText("Users Status");
         btnVerifyUsers.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnVerifyUsersActionPerformed(evt);
