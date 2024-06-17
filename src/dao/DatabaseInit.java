@@ -92,7 +92,7 @@ public class DatabaseInit {
               
             INSERT INTO Category (Name)
             VALUES
-                ('Beverages'),
+                ('Beverages'), 
                 ('Pastries'),
                 ('Sandwiches'),
                 ('Salads'),
@@ -100,7 +100,10 @@ public class DatabaseInit {
                 ('Smoothies'),
                 ('Breakfast'),
                 ('Wraps'),
-                ('Soup');
+                ('Soup'),
+                ('Hand brew'),
+                ('Espresso'),
+                ('tea');
             """;
 
     private static final String productTable
@@ -114,9 +117,16 @@ public class DatabaseInit {
             );
             INSERT INTO Product (Name, Price, CategoryId)
             VALUES
-                ('Espresso', 2.50, 1),
-                ('Cappuccino', 3.00, 1),
-                ('Latte', 3.50, 1),
+                ('Espresso', 2.50, 11),
+                ('Cappuccino', 3.00, 11),
+                ('Latte', 3.50, 11),
+                ('Pour Over', 3.50, 10),
+                ('French Press', 3, 10),
+                ('Cold Brew', 2.5, 10),
+                ('Cold Drip', 2.5, 10),
+                ('long black', 2.5, 11),
+                ('Syphon', 3, 10),
+                ('Milk Tea', 2, 12),
                 ('Croissant', 2.00, 2),
                 ('Chocolate Muffin', 2.50, 2),
                 ('Ham and Cheese', 4.50, 3),
@@ -133,7 +143,7 @@ public class DatabaseInit {
                 ('Vegetable Wrap', 4.50, 8),
                 ('Tomato Soup', 3.50, 9),
                 ('Mushroom Soup', 3.00, 9),
-                ('Iced Tea', 2.50, 1),
+                ('Iced Tea', 2.50, 12),
                 ('Fruit Salad', 4.50, 5),
                 ('Blueberry Muffin', 2.50, 2),
                 ('Tuna Sandwich', 5.50, 3),
@@ -151,7 +161,7 @@ public class DatabaseInit {
                 ('French Toast', 5.00, 7),
                 ('Veggie Wrap', 4.50, 8),
                 ('Lentil Soup', 3.00, 9),
-                ('Mocha', 3.50, 1),
+                ('Mocha', 3.50, 11),
                 ('Cherry Pie', 4.00, 5),
                 ('Blueberry Smoothie', 4.50, 6),
                 ('Scone', 2.00, 2),
