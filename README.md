@@ -21,7 +21,7 @@
 - Lựa chọn phương thức thanh toán, thêm thông tin thanh toán
 - Mua hàng, nhận giảm giá các dịp đặc biệt
 
-# Deploy
+## Deploy
 Tải thư mục về localhost
 
 Trước khi chạy, hãy nhớ cài đặt JDK 17 `https://www.oracle.com/java/technologies/downloads/#jdk17-windows`
