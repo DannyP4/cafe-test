@@ -277,7 +277,7 @@ public class DatabaseInit {
 
     public static final String checkLegitofUserAgeTrigger =
             """
-                    CREATE TRIGGER ageLegit
+                    CREATE TRIGGER tg_ageLegit
                     ON [User]
                     INSTEAD OF INSERT
                     AS
@@ -303,7 +303,7 @@ public class DatabaseInit {
 
     public static final String checkLegitofStaffAgeTrigger =
             """
-                    CREATE TRIGGER ageLegitofStaff
+                    CREATE TRIGGER tg_ageLegitofStaff
                     ON Staff
                     INSTEAD OF INSERT
                     AS
