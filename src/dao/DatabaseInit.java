@@ -103,7 +103,7 @@ public class DatabaseInit {
                 ('Soup'),
                 ('Hand brew'),
                 ('Espresso'),
-                ('tea');
+                ('Tea');
             """;
 
     private static final String productTable
