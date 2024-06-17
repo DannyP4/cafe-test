@@ -126,7 +126,6 @@ public class AddOrEditStaff extends javax.swing.JFrame {
         });
         jPanel1.add(txtSalary, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 300, 299, 30));
 
-        txtPhone.setEditable(false);
         txtPhone.setBackground(new java.awt.Color(250, 242, 228));
         txtPhone.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         txtPhone.addKeyListener(new java.awt.event.KeyAdapter() {
