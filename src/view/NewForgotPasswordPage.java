@@ -240,7 +240,7 @@ public class NewForgotPasswordPage extends javax.swing.JFrame {
             UserDao.updatePassword(email, newPassword);
         }
         else
-            JOptionPane.showMessageDialog(null, "<html><b style = \"color:red\">Incorrect Email</b></html>", "Message", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, "<html><b style = \"color:red\">Incorrect Answer</b></html>", "Message", JOptionPane.ERROR_MESSAGE);
 
     }//GEN-LAST:event_btnUpdateActionPerformed
 
