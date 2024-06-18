@@ -26,7 +26,7 @@ Tải thư mục về localhost
 
 Trước khi chạy, hãy nhớ cài đặt JDK 17 `https://www.oracle.com/java/technologies/downloads/#jdk17-windows`
 
-Khởi động IDE, Text Editor (Intelliji, Netbeans, VSCode, ...), mở thư mục `28_PhamDucLong` lên
+Khởi động IDE, Text Editor (Intelliji, Netbeans, VSCode, ...), mở thư mục `05_PhamDucLong` lên
 
 Trước tiên hãy vào `src >> dao >> ConnectionProvider` để setting máy chủ SQLServer về localhost cá nhân
 
